@@ -4,49 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Môj zoznam obľúbených filmov</title>
+    <!-- Pripojenie CSS súboru - všetky štýly sú v externom súbore -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <!-- Hlavný nadpis stránky (najväčší) -->
     <h1>Môj zoznam obľúbených filmov</h1>
 
+    <!-- Podnadpis pre sekciu komédií -->
     <h2>Komédie</h2>
-    <ul>
+    <!-- Neusporiadaný zoznam (bullets) s TRIEDOU "filmy" -->
+    <!-- class="filmy" -> použije CSS štýl .filmy (modrá farba) -->
+    <ul class="filmy">
         <li>Blbí a blbší</li>
         <li>Maska</li>
         <li>Čo sme komu urobili</li>
     </ul>
 
+    <!-- Podnadpis pre sekciu sci-fi -->
     <h2>Sci-fi</h2>
-    <ul>
+    <!-- Ďalší zoznam s TRIEDOU "filmy" (triedy môžeme použiť viackrát) -->
+    <ul class="filmy" >
         <li>The Hangober</li>
         <li>Interstellar</li>
         <li>The Matrix</li>
     </ul>
 
+    <!-- Podnadpis pre hercov a herečky -->
     <h2>Herci a herečky</h2>
 
+<!-- Zložitejšia štruktúra - zoznamy v zoznamoch (vnorené) -->
 <ul>
     <li>Herečky</li>
+     <!-- Usporiadaný zoznam (číslovaný) -->
      <ol>
         <li>Maryl Streep</li>
         <li>Scarlett Johanson</li>
         <li>Cate Blanchett</li>
      </ol>
     <li>Herci</li>
+     <!-- Ďalší usporiadaný zoznam -->
      <ol>
         <li>Robert De Niro</li>
-        <li>Antonio Banderas
+        <!-- Tento <li> má TRIEDU "filmy", bude modrý -->
+        <li class="filmy">Antonio Banderas
+         <!-- Vnorený neusporiadaný zoznam v rámci položky -->
          <ul>
             <li>Desperado</li>
             <li>Tanec je môj život</li>
          </ul>
         </li> 
-        <li>Morgan Freeman</li>
+        <!-- Aj tento <li> má TRIEDU "filmy" -->
+        <li class="filmy">Morgan Freeman</li>
         <li>Edward Norton</li>
         <li>Chuck Norris</li>
      </ol>
     <li>TOTO JE VŠETKO!</li>
 </ul>
-    <P>Toto je VŠETKO, čo sme chceli napísať, už len aby to vyzeralo ako na tomto obrázku!</P>
+
+<!-- Menší nadpis (h3 je menší ako h2) -->
+<h3>Prvý pekný nadpis</h3>
+
+<!-- Odstavec s ID "unikat" - ID môže byť len raz na stránke! -->
+<!-- id="unikat" -> použije CSS štýl #unikat (veľké písmo, veľké písmená, na stred) -->
+<p id="unikat">
+    Toto je VŠETKO, čo sme chceli napísať, už len aby to vyzeralo ako na tomto obrázku! Som unikát!
+</p>
+
+<!-- Odstavec s TRIEDOU "gradientovy-text" (ružovo-červený gradient) -->
+<p class="gradientovy-text">
+    Corporis adipisci quo odit sit sed culpa harum suscipit modi ullam, placeat unde laudantium doloremque. Rem, ipsum dolorem. Repellendus debitis et id consectetur laboriosam maiores non optio labore perspiciatis a.
+</p>
+
+<!-- Odstavec s TRIEDOU "oramovany-s-tienom" (modrý rámček, svetlomodré pozadie) -->
+<p class="oramovany-s-tienom">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis perferendis tempore quam nesciunt sunt. Quos, vel dolore impedit sed inventore modi pariatur, eius iste iusto et molestiae alias sint ipsum.
+</p>
+
+<!-- Odstavec s TRIEDOU "ozdobna-karta" (oranžovo-broskyňový gradient, veľký tieň) -->
+<p class="ozdobna-karta">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus quisquam neque blanditiis id maiores quis eligendi quidem, autem pariatur, tempora consequuntur nam inventore! Ipsa temporibus atque, quae at consequatur error.
+    Corporis adipisci quo odit sit sed culpa harum suscipit modi ullam, placeat unde laudantium doloremque. Rem, ipsum dolorem. Repellendus debitis et id consectetur laboriosam maiores non optio labore perspiciatis a.
+</p>
+
+<!-- Odstavec s TRIEDOU "zvyrazneny-box" (fialový gradient, biely text, na stred) -->
+<p class="zvyrazneny-box">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio voluptatem illo optio eum tenetur corporis perspiciatis dignissimos non nesciunt debitis. Nemo aut assumenda sunt optio corporis quaerat minus, quas quasi!
+</p>
+
+<h3 id="cerveny" class="traja">Veľký červený nadpis</h3>
+
+<h3 class="traja">Taký normálny po</h3>
+
+<h3 class="traja">Taký normálny kla</h3>
+
+<h3 class="traja">Taký normálny dy</h3>
 
 
 

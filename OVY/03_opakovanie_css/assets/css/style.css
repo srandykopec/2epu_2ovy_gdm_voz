@@ -1,0 +1,127 @@
+/* 
+==============================================
+   SELEKTORY V CSS - Výber prvkov na úpravu
+==============================================
+
+SELEKTOR = spôsob, akým CSS vyberá HTML prvky, ktoré chceme štylizovať
+
+TYPY SELEKTOROV:
+
+1. SELEKTOR ELEMENTU (tagov)
+   - Píše sa: názov HTML tagu (napr. body, p, h1)
+   - Použitie: Keď chceme štýlovať VŠETKY prvky daného typu
+   - Príklad: p { color: red; } → všetky odstavce budú červené
+   - Špecifickosť: NÍZKA (platí všeobecne)
+
+2. SELEKTOR TRIEDY (class)
+   - Píše sa: bodka + názov triedy (napr. .filmy, .zvyrazneny-box)
+   - HTML: <p class="filmy">
+   - Použitie: Keď chceme štýlovať SKUPINU prvkov (môže ich byť viac)
+   - Príklad: .filmy { color: blue; } → všetky prvky s class="filmy"
+   - Špecifickosť: STREDNÁ (silnejšia ako element)
+   - Výhoda: Môžeme použiť viackrát na stránke
+
+3. SELEKTOR ID
+   - Píše sa: mriežka + názov id (napr. #unikat)
+   - HTML: <p id="unikat">
+   - Použitie: Keď chceme štýlovať JEN JEDEN jedinečný prvok
+   - Príklad: #unikat { font-size: 50px; } → len prvok s id="unikat"
+   - Špecifickosť: NAJVYŠŠIA (prepíše class aj element)
+   - Pravidlo: ID môže byť na stránke len raz!
+
+KEDY ČO POUŽIŤ:
+- Element: všeobecné štýly pre všetky prvky (napr. všetky p, h1)
+- Class: opakovateľné štýly pre skupiny prvkov (tlačidlá, karty, ikony)
+- ID: jedinečné prvky (hlavná navigácia, hlavička, footer)
+============================================== 
+*/
+
+/* SELEKTOR ELEMENTU - štýluje VŠETKY <body> elementy (je len jeden) */
+body{
+    background-color: cornsilk; /* Béžové pozadie celej stránky */
+}
+
+/* SELEKTOR ELEMENTU - štýluje VŠETKY <p> odstavce na stránke */
+p{
+    color: cyan; /* Všetky odstavce budú tyrkysové */
+}
+
+/* VIACNÁSOBNÝ SELEKTOR - štýluje VŠETKY <ul> A <ol> zoznamy naraz */
+ul, ol{
+    color: #bada55; /* Zelená farba pre všetky zoznamy */
+}
+
+/* SELEKTOR TRIEDY (class) - štýluje prvky s class="filmy" */
+/* Môže byť použitý viackrát na stránke (viacero prvkov môže mať túto triedu) */
+.filmy{
+    color: deepskyblue; /* Modrá farba pre prvky s class="filmy" */
+}
+
+/* SELEKTOR ID - štýluje LEN JEDEN prvok s id="unikat" */
+/* ID môže byť na stránke len raz! Je to jedinečný identifikátor */
+#unikat{
+    font-size: 50px; /* Veľké písmo */
+    text-transform: uppercase; /* Veľké písmená */
+    text-align: center; /* Zarovnanie na stred */
+}
+
+/* ===================================
+   TRIEDY PRE ŠPECIÁLNE ŠTÝLY ODSTAVCOV
+   =================================== */
+
+/* TRIEDA: zvyrazneny-box - fialový gradient box */
+.zvyrazneny-box {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Fialový prechod */
+    color: white; /* Biely text */
+    padding: 20px 25px; /* Vnútorný priestor okolo textu */
+    border-radius: 15px; /* Zaoblené rohy */
+    font-weight: bold; /* Tučné písmo */
+    text-align: center; /* Text na stred */
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4); /* Tieň pod boxom */
+    margin: 20px 0; /* Vonkajší odstup hore a dole */
+}
+
+/* TRIEDA: gradientovy-text - ružovo-červený gradient */
+.gradientovy-text {
+    background: linear-gradient(to right, #f093fb 0%, #f5576c 100%); /* Ružovo-červený prechod */
+    padding: 25px; /* Vnútorný priestor */
+    border-radius: 10px; /* Zaoblené rohy */
+    color: white; /* Biely text */
+    font-style: italic; /* Kurzíva */
+    line-height: 1.8; /* Výška riadku (medzera medzi riadkami) */
+    box-shadow: 0 4px 15px rgba(245, 87, 108, 0.3); /* Jemný tieň */
+    margin: 20px 0; /* Vonkajší odstup */
+}
+
+/* TRIEDA: oramovany-s-tienom - modrý rámček s pevným tieňom */
+.oramovany-s-tienom {
+    border: 3px solid #00d2ff; /* Modrý rámček 3px hrubý */
+    padding: 20px; /* Vnútorný priestor */
+    border-radius: 8px; /* Mierne zaoblené rohy */
+    background-color: #f0f9ff; /* Svetlomodré pozadie */
+    color: #0c4a6e; /* Tmavomodrý text */
+    box-shadow: 5px 5px 0px #00d2ff; /* Pevný tieň vpravo a dole (nie rozmazaný) */
+    margin: 20px 0; /* Vonkajší odstup */
+    font-family: 'Courier New', monospace; /* Písmo ako na písacom stroji */
+}
+
+/* TRIEDA: ozdobna-karta - oranžovo-broskyňová karta s tieňom */
+.ozdobna-karta {
+    background: linear-gradient(145deg, #ffecd2 0%, #fcb69f 100%); /* Oranžovo-broskyňový prechod */
+    padding: 30px; /* Veľký vnútorný priestor */
+    border-radius: 20px; /* Veľmi zaoblené rohy */
+    color: #8b4513; /* Hnedý text */
+    border-left: 6px solid #ff6b6b; /* Hrubý červený rámček naľavo */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Veľký rozmazaný tieň */
+    line-height: 1.9; /* Väčšia výška riadku pre čitateľnosť */
+    margin: 20px 0; /* Vonkajší odstup */
+}
+
+#cerveny{
+    color: red;
+    text-transform: capitalize;
+}
+
+.traja{
+    text-transform: uppercase;
+}
