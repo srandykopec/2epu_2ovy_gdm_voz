@@ -757,6 +757,41 @@ p {
 
 ---
 
+### 🎁 BONUS: OKLCH (moderný spôsob pre pokročilých, na hodinách nevyžadujem, ale aby bolo jasné, že niečo také jestvuje)
+
+**OKLCH** je **nový a moderný** spôsob definovania farieb, ktorý má lepšie vlastnosti ako HSL.
+
+```css
+h1 {
+    color: oklch(60% 0.15 30);  /* Oranžová */
+}
+
+p {
+    background-color: oklch(70% 0.1 240);  /* Svetlo modrá */
+}
+```
+
+**Formát:** `oklch(svetlosť chromatickosť odtieň)`
+- **Svetlosť:** 0-100% (ako svetlá je farba)
+- **Chromatickosť:** 0-0.4 (sýtosť farby)
+- **Odtieň:** 0-360 (ako v HSL)
+
+**Prečo je OKLCH lepší ako HSL?**
+- ✅ Rovnomernejšie vnímanie svetlosti (žltá a modrá s rovnakou svetlosťou vyzerajú skutočne rovnako svetlé)
+- ✅ Prirodzenejšie farby
+- ✅ Lepší pre accessibility (prístupnosť)
+
+**Nevýhody:**
+- ❌ Relatívne nový (podpora v prehliadačoch od 2023)
+- ❌ Zložitejší pre začiatočníkov
+
+**Kedy použiť:**
+- Pre pokročilých vývojárov
+- Keď potrebuješ presnejšiu kontrolu nad farbami
+- Keď ti záleží na accessibility
+
+---
+
 ### 📊 Porovnanie spôsobov
 
 | Spôsob | Príklad | Priehľadnosť | Použitie |
@@ -766,10 +801,12 @@ p {
 | **RGB** | `rgb(255, 0, 0)` | ❌ | Alternatíva k HEX |
 | **RGBA** | `rgba(255, 0, 0, 0.5)` | ✅ | Priehľadnosť |
 | **HSL** | `hsl(0, 100%, 50%)` | ❌ | Pokročilé |
+| **OKLCH** | `oklch(60% 0.15 30)` | ✅ | Moderné (bonus) |
 
 **Odporúčanie:**
 - Začiatočníci: **Názov** alebo **HEX**
 - Priehľadnosť: **RGBA**
+- Pokročilí: **OKLCH**
 
 ---
 
