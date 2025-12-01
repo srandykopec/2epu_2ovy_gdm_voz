@@ -1,6 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 
+
+:root {
+    --hlavna-farba: chocolate;
+}
+
+
+.zeleny{
+    color: var(--hlavna-farba);
+    padding: 150px;
+    border: dotted 50px red;
+    margin-top: 130px;
+}
+
+.bledy{
+    color: var(--hlavna-farba);
+}
+
+
+
+
+
+
+
+
+
+
+
 body{
     font-family: 'Roboto', Arial, sans-serif;
     font-size: 16px;
