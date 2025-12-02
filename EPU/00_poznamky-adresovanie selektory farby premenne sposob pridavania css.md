@@ -810,7 +810,190 @@ p {
 
 ---
 
-## 7. Premenné v CSS (CSS Variables)
+## 7. Box Model - Ako funguje veľkosť elementov?
+
+**Box Model** je koncept v CSS, ktorý určuje, **ako sa počíta celková veľkosť** elementu na stránke.
+
+### 📦 Čo je Box Model?
+
+Každý HTML element je **obdĺžnik (box)**, ktorý sa skladá z **4 častí**:
+
+```
+┌─────────────────────────────────────┐
+│         MARGIN (vonkajší okraj)     │  ← Priestor OKOLO elementu
+│  ┌──────────────────────────────┐   │
+│  │   BORDER (okraj/rámček)      │   │  ← Viditeľný okraj elementu
+│  │  ┌───────────────────────┐   │   │
+│  │  │ PADDING (vnútorný)    │   │   │  ← Priestor VNÚTRI medzi obsahom a okrajom
+│  │  │  ┌─────────────────┐  │   │   │
+│  │  │  │   CONTENT       │  │   │   │  ← Samotný obsah (text, obrázok...)
+│  │  │  │   (obsah)       │  │   │   │
+│  │  │  └─────────────────┘  │   │   │
+│  │  └───────────────────────┘   │   │
+│  └──────────────────────────────┘   │
+└─────────────────────────────────────┘
+```
+
+**4 časti Box Modelu:**
+
+1. **CONTENT (obsah)** - text, obrázok, atď.
+2. **PADDING (vnútorný okraj)** - priestor medzi obsahom a okrajom
+3. **BORDER (okraj)** - viditeľný okraj okolo elementu
+4. **MARGIN (vonkajší okraj)** - priestor medzi týmto elementom a inými elementmi
+
+---
+
+### 📏 Príklad: Ako sa počíta veľkosť?
+
+```css
+.box {
+    width: 200px;        /* Šírka obsahu */
+    padding: 20px;       /* Vnútorný okraj */
+    border: 5px solid black;  /* Okraj */
+    margin: 10px;        /* Vonkajší okraj */
+}
+```
+
+**Celková šírka elementu:**
+```
+200px (content)
++ 20px (padding-left)
++ 20px (padding-right)
++ 5px (border-left)
++ 5px (border-right)
+= 250px (skutočná šírka elementu)
+```
+
+**Margin sa NEPOČÍTA do veľkosti elementu** - je to len priestor okolo neho!
+
+---
+
+### 🎨 Vizuálny príklad
+
+**HTML:**
+```html
+<div class="box">Text vnútri boxu</div>
+```
+
+**CSS:**
+```css
+.box {
+    width: 200px;
+    height: 100px;
+    padding: 20px;           /* Vnútorný priestor */
+    border: 3px solid blue;  /* Modrý okraj */
+    margin: 30px;            /* Vonkajší priestor */
+    background-color: lightblue;
+}
+```
+
+**Výsledok:**
+- Text je **20px** od modrého okraju (padding)
+- Modrý okraj má hrúbku **3px** (border)
+- Medzi týmto elementom a ostatnými je **30px** priestoru (margin)
+
+---
+
+### 💡 Rozdiel medzi padding a margin
+
+**PADDING (vnútorný okraj):**
+- Priestor **VNÚTRI** elementu
+- Je súčasťou elementu
+- **Dedí farbu pozadia** elementu
+
+```css
+.box {
+    background-color: yellow;
+    padding: 20px;  /* Žltý priestor vnútri */
+}
+```
+
+**MARGIN (vonkajší okraj):**
+- Priestor **OKOLO** elementu
+- Nie je súčasťou elementu
+- Je **vždy transparentný** (priesvitný)
+
+```css
+.box {
+    background-color: yellow;
+    margin: 20px;  /* Prázdny priestor okolo, nie žltý */
+}
+```
+
+---
+
+### 🔢 Ako zadávať hodnoty?
+
+**1. Všetky strany rovnaké:**
+```css
+padding: 20px;  /* 20px zhora, zprava, zdola, zľava */
+```
+
+**2. Vertikálne a horizontálne:**
+```css
+padding: 20px 40px;  /* 20px zhora/zdola, 40px zľava/zprava */
+```
+
+**3. Zhora, horizontálne, zdola:**
+```css
+padding: 10px 20px 30px;  /* 10px zhora, 20px z boku, 30px zdola */
+```
+
+**4. Každá strana zvlášť:**
+```css
+padding: 10px 20px 30px 40px;  /* Zhora, Zprava, Zdola, Zľava (v smere hodinových ručičiek) */
+```
+
+**Alebo konkrétne:**
+```css
+padding-top: 10px;
+padding-right: 20px;
+padding-bottom: 30px;
+padding-left: 40px;
+```
+
+---
+
+### 🎯 Kedy použiť padding a kedy margin?
+
+**Použiť PADDING:**
+- Chceš **väčší priestor vnútri** elementu (medzi textom a okrajom)
+- Chceš, aby sa farba pozadia rozšírila
+- Príklad: Tlačidlo, karta
+
+**Použiť MARGIN:**
+- Chceš **priestor medzi** elementmi
+- Chceš oddeliť elementy od seba
+- Príklad: Medzera medzi odstavcami, sekciami
+
+---
+
+### 📌 Príklad z praxe
+
+```html
+<div class="karta">
+    <h2>Nadpis karty</h2>
+    <p>Text karty</p>
+</div>
+```
+
+```css
+.karta {
+    width: 300px;
+    padding: 30px;           /* Priestor vnútri karty */
+    margin: 20px;            /* Priestor okolo karty */
+    border: 2px solid #ddd;
+    background-color: white;
+}
+```
+
+**Výsledok:**
+- Text je **30px** od okraja karty (padding)
+- Medzi kartami je **20px** priestoru (margin)
+
+---
+
+## 8. Premenné v CSS (CSS Variables)
 
 Premenné umožňujú **uložiť hodnotu** (napr. farbu) a **znova ju použiť** na viacerých miestach.
 
@@ -970,7 +1153,7 @@ section {
 
 ---
 
-## 8. Absolútne a relatívne adresy (URL)
+## 9. Absolútne a relatívne adresy (URL) - NEBUDE NA PÍSOMKE
 
 Adresy (URL) používame na **odkazy** a **obrázky**.
 
