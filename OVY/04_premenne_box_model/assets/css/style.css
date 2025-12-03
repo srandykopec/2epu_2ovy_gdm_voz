@@ -1,0 +1,19 @@
+:root {
+  --farba-pozadia: #ecf0f1;
+  --primarna-farba: #3498db;
+  --sekundarna-farba: #2ecc71;
+  --farba-textu: #2c3e50;
+}
+
+body{
+    background-color: var(--farba-pozadia);
+    padding: 20px;
+}
+
+header{
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+section{
+    background-color: white;
+}
