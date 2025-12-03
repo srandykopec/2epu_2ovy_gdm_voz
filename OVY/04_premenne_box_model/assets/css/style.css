@@ -8,12 +8,42 @@
 body{
     background-color: var(--farba-pozadia);
     padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 header{
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+main{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1{
+    color: white;
+    font-size: 36px;
+}
+
+.header__podnadpis{
+    color: var(--farba-textu);
 }
 
 section{
     background-color: white;
+}
+
+.temy{
+    /* border: 5px solid var(--primarna-farba); */
+    padding: 20px;
+    margin: 20px;
+}
+
+h2{
+    color: var(--farba-textu);
+    border-bottom: 5px solid var(--primarna-farba);
+    padding-bottom: 10px;
 }
