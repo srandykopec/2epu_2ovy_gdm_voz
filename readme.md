@@ -98,6 +98,7 @@ https://www.youtube.com/watch?v=m6tE_bgi3qo
 
 ## Ako na AI? 🤖
 
+**📖 Podrobný návod:** [GitHub Copilot Cloud Agent - Kompletný sprievodca](github-copilot-cloud-agent.md)
 
 AI je super pomocník, ale v začiatkoch sa sústreď na to, aby si rozumel/a kódu, ktorý píšeš. Nejde o to, aby si mal/a najviac funkcií, ale aby si vedel/a vysvetliť, čo robí každý riadok. Ak použiješ AI, vždy si prečítaj, čo ti navrhla, a skús to vysvetliť vlastnými slovami. V projekte je dôležité, aby si vedel/a svoj kód obhájiť! 💬
 
