@@ -180,7 +180,7 @@ Označíš časť kódu a poprosíš agenta o zmenu:
    ✅ "Aký je rozdiel medzi let, const a var?"
    ```
 
-3. **Použite ho na debugging**
+3. **Použi ho na ladenie chýb**
    ```
    ✅ "Prečo mi tento CSS kód nefunguje?"
    ✅ "Čo znamená táto chybová hláška?"
@@ -257,10 +257,10 @@ Označíš časť kódu a poprosíš agenta o zmenu:
 ```
 
 ### Tip 4: Skús najprv sám
-Použite Agent ako **posledný krok**, nie prvý:
+Použi agenta ako **posledný krok**, nie prvý:
 1. Skús sám napísať kód ✍️
 2. Ak nevieš, google it 🔍
-3. Stále nejde? Opýtaj sa Agenta 🤖
+3. Stále nejde? Opýtaj sa agenta 🤖
 4. Vždy si prečítaj a pochop odpoveď! 📖
 
 ---
@@ -331,7 +331,7 @@ Použite Agent ako **posledný krok**, nie prvý:
 
 ## Záverečné slová 💬
 
-GitHub Copilot Cloud Agent je ako super šikovný menttor, ktorý je k dispozícii 24/7. Ale pamätaj:
+GitHub Copilot Cloud Agent je ako super šikovný mentor, ktorý je k dispozícii 24/7. Ale pamätaj:
 
 ✅ **Používaj ho múdro** - na učenie, nie len na kopírovanie  
 ✅ **Vždy porozumej kódu** - ty musíš vedieť vysvetliť, čo robí  
