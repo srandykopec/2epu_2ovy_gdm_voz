@@ -14,7 +14,32 @@
 
 }
 
-
 body{
   font-family: "Poppins", sans-serif;
+  /* color: var(--jano); */
+}
+
+header{
+  background-color: var(--farba-skibidi);
+  padding: 20px;
+}
+
+.header-obsah{
+  max-width: 900px;
+  margin: auto;
+}
+
+main{
+  max-width: 900px;
+  margin: auto;
+}
+
+nav ul li{
+  display: inline-block;
+}
+
+/* Navigácia */
+nav ul {
+  list-style: none;
+  padding: 0;
 }
