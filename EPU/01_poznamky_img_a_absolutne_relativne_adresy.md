@@ -95,10 +95,22 @@ moj-web/               ← KOREŇ projektu (hlavný priečinok, alebo aj root)
 <a href="../index.html">Domov</a>
 ```
 
-**Analogia zo života:**
-- `./` = "tu kde stojím"
-- `../` = "choď o poschodie vyššie"
-- `../../` = "choď dve poschodia vyššie"
+**Analógia s knižnicou:**
+
+Predstav si, že tvoj webový projekt je **veľká knižnica s oddeleniami**.
+
+- **Ty (tvoj HTML súbor)** = stojíš v konkrétnom oddelení knižnice
+- **Priečinky** = rôzne oddelenia knižnice (detektívky, sci-fi, časopisy...)
+- **Súbory** = jednotlivé knihy v oddeleniach
+
+**Ako sa pohybuješ:**
+
+- `about.html` = "Vezmi knihu 'about.html', ktorá je **v tom istom oddelení** kde teraz stojíš"
+- `assets/images/logo.png` = "Choď do oddelenia 'assets', potom do pododdelenia 'images' a vezmi knihu 'logo.png'"
+- `../index.html` = "**Vyjdi z aktuálneho oddelenia** (k nadriadenej časti knižnice) a tam vezmi 'index.html'"
+- `../../kontakt.html` = "**Vráť sa o dve oddelenia späť** a tam vezmi 'kontakt.html'"
+
+📍 **Kľúč:** `../` znamená "krok späť do nadriadeného oddelenia", nie o poschodie, ale o úroveň v hierarchii!
 
 ---
 
