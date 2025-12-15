@@ -107,7 +107,7 @@ Predstav si, že tvoj webový projekt je **veľká knižnica s oddeleniami**.
 
 - `about.html` = "Vezmi knihu 'about.html', ktorá je **v tom istom oddelení** kde teraz stojíš"
 - `assets/images/logo.png` = "Choď do oddelenia 'assets', potom do pododdelenia 'images' a vezmi knihu 'logo.png'"
-- `../index.html` = "**Vyjdi z aktuálneho oddelenia** (k nadriadenej časti knižnice) a tam vezmi 'index.html'"
+- `../index.html` = "**Vyjdi z aktuálneho oddelenia** a tam vezmi 'index.html'"
 - `../../kontakt.html` = "**Vráť sa o dve oddelenia späť** a tam vezmi 'kontakt.html'"
 
 📍 **Kľúč:** `../` znamená "krok späť do nadriadeného oddelenia", nie o poschodie, ale o úroveň v hierarchii!
@@ -122,7 +122,7 @@ Predstav si, že tvoj webový projekt je **veľká knižnica s oddeleniami**.
 <img src="./images/logo.png" alt="Logo firmy">
 ```
 
-### **Scenár 2:** Si v `kontakt/index.html`, chceš logo z priečinka `images/`
+### **Scenár 2:** Si v `kontakt/kontakt.html`, chceš logo z priečinka `images/`
 
 ```
 moj-web/
@@ -130,7 +130,7 @@ moj-web/
 ├── images/
 │   └── logo.png
 └── kontakt/
-    └── index.html  ← TY SI TU
+    └── kontakt.html  ← TY SI TU
 ```
 
 ```html
