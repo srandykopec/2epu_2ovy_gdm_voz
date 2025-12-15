@@ -71,14 +71,14 @@ moj-web/               ← KOREŇ projektu (hlavný priečinok, alebo aj root)
 
 ### 3️⃣ **Relatívna cesta od aktuálneho súboru** (NAJPOUŽÍVANEJŠIA! ⭐)
 
-#### **a) Súbor v tom istom priečinku** → jednoducho napíš názov súboru
+#### **a) Súbor v tom istom priečinku** → použij `./`
 
 ```html
 <!-- Ak si v index.html a about.html je vedľa neho: -->
-<a href="about.html">O nás</a>
+<a href="./about.html">O nás</a>
 ```
 
-**Prax:** Nie je potrebné písať `./` pred názvom súboru, stačí samotný názov.
+**Prax:** Odporúča sa písať `./` pred názvom súboru pre lepšiu čitateľnosť a explicitnosť.
 
 #### **b) Súbor v podpriečinku** → použi názov priečinka
 
