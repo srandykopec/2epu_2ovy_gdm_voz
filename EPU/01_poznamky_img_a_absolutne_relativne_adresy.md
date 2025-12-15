@@ -303,35 +303,6 @@ Na mobile sa po kliknutí spustí vytáčanie!
 
 ---
 
-## 🎨 Štýlovanie odkazov v CSS
-
-```css
-/* Základný štýl odkazu */
-a {
-    color: #3498db;
-    text-decoration: none; /* odstráni podčiarknutie */
-    font-weight: bold;
-}
-
-/* Keď prejdeš myšou cez odkaz */
-a:hover {
-    color: #2c3e50;
-    text-decoration: underline;
-}
-
-/* Navštívený odkaz */
-a:visited {
-    color: #9b59b6;
-}
-
-/* Práve kliknutý odkaz */
-a:active {
-    color: #e74c3c;
-}
-```
-
----
-
 ## 🖼️ ČASŤ 3: Element `<img>` - Obrázky v HTML
 
 ### 📖 Čo to je?
@@ -383,7 +354,7 @@ Element `<img>` slúži na **vloženie obrázka** priamo do HTML stránky.
 
 **📚 MDN dokumentácia:** [https://developer.mozilla.org/en-US/docs/Web/CSS/background-image](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image)
 
----
+
 ---
 
 
