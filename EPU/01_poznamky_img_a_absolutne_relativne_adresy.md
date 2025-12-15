@@ -20,15 +20,21 @@ Keď vytváraš web, musíš vedieť **ako nájsť súbory**:
 ### 📁 Predstav si svoj projekt ako priečinky
 
 ```
-moj-web/               ← KOREŇ projektu (hlavný priečinok)
+moj-web/               ← KOREŇ projektu (hlavný priečinok, alebo aj root)
 ├── index.html         ← Domovská stránka
 ├── about.html         ← Stránka "O nás"
-├── images/            ← Priečinok s obrázkami
-│   ├── logo.png
-│   └── pozadie.jpg
-├── css/               ← Priečinok so štýlmi
-│   └── style.css
-└── kontakt/           ← Podpriečinok
+├── kontakt.html       ← Stránka kontakt
+├── assets/            ← Priečinok so všetkými zdrojmi (ako sme zvyknutí)
+│   ├── css/           ← Priečinok so štýlmi
+│   │   ├── normalize.css
+│   │   └── style.css
+│   ├── images/        ← Priečinok s obrázkami
+│   │   ├── logo.png
+│   │   └── pozadie.jpg
+│   ├── js/            ← Priečinok s JavaScriptom
+│       └── script.js
+
+└── podstranka/        ← Podpriečinok s ďalšou stránkou
     └── index.html
 ```
 
