@@ -33,7 +33,6 @@ moj-web/               ← KOREŇ projektu (hlavný priečinok, alebo aj root)
 │   │   └── pozadie.jpg
 │   ├── js/            ← Priečinok s JavaScriptom
 │       └── script.js
-
 └── podstranka/        ← Podpriečinok s ďalšou stránkou
     └── index.html
 ```
