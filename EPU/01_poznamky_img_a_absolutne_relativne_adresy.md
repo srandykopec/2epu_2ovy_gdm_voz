@@ -163,17 +163,32 @@ moj-web/
 
 ---
 
-### ❌ **CHYBA 2: Slovenské znaky (čžšťľô...)**
+### ❌ **CHYBA 2: Zlé pomenovanie súborov a priečinkov**
 
 ```html
 <!-- ❌ ZLYHÁ: -->
-<img src="./images/fotka_žiakov.jpg" alt="Žiaci">
+<img src="./images/Fotka_Žiakov.JPG" alt="Žiaci">
+<link rel="stylesheet" href="./css/Štýly.css">
+<a href="./Kontakt.html">Kontakt</a>
 
 <!-- ✅ SPRÁVNE: -->
 <img src="./images/fotka-ziakov.jpg" alt="Žiaci">
+<link rel="stylesheet" href="./css/styly.css">
+<a href="./kontakt.html">Kontakt</a>
 ```
 
-**Pravidlo:** V názvoch súborov používaj **len anglickú abecedu a čísla**
+**Pravidlá pre názvy súborov a priečinkov:**
+- ❌ **Žiadna diakritika** (č, ž, š, ť, ľ, ô, á, é...) → nahraď ich obyčajnými písmenami
+- ❌ **Žiadne veľké písmená** → používaj len malé písmená (lowercase)
+- ❌ **Žiadne medzery** → nahraď ich **pomlčkou `-`** (odporúčané) alebo **podčiarkovníkom `_`**
+- ✅ **Len anglická abeceda** (a-z), čísla (0-9), pomlčka (`-`) a podčiarkovník (`_`)
+- ✅ **Vždy uvádzaj príponu súboru** (.html, .jpg, .png, .css, .js)
+
+**Príklady správneho pomenovania:**
+- ✅ `index.html`, `about.html`, `kontakt.html`
+- ✅ `fotka-ziakov.jpg`, `banner_hlavny.png`, `pozadie-2024.jpg`
+- ✅ `normalize.css`, `style.css`, `hlavne-styly.css`
+- ✅ `script.js`, `hlavny-skript.js`
 
 ---
 
