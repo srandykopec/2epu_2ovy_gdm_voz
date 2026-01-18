@@ -12,6 +12,13 @@ Kedysi sa na rozloženie stránky používali **tabuľky** (`<table>`) alebo **f
 - ✅ Vycentrovať čokoľvek (horizontálne aj vertikálne)
 - ✅ Vytvoriť responzívne stránky bez komplikácií
 
+**Čo je responzívna stránka?**  
+Stránka, ktorá sa **automaticky prispôsobí veľkosti obrazovky** - vyzerá dobre na PC, tablete aj mobile.
+
+**Rozdiel:**
+- ❌ **Neresponzívna:** Fixná šírka, na mobile treba scrollovať horizontálne (otrasný zážitok)
+- ✅ **Responzívna:** Automaticky sa preusporiadava - napr. 3 stĺpce na PC → 1 stĺpec na mobile
+
 ---
 
 ## 📦 Základná myšlienka
@@ -23,9 +30,9 @@ Flexbox a Grid ti umožňujú **kontrolovať**, ako sú tieto menšie krabice **
 ```
 ┌─────────────────────────────────┐
 │  KONTAJNER                      │
-│  ┌─────┐  ┌─────┐  ┌─────┐     │
-│  │  1  │  │  2  │  │  3  │     │
-│  └─────┘  └─────┘  └─────┘     │
+│  ┌─────┐  ┌─────┐  ┌─────┐      │
+│  │  1  │  │  2  │  │  3  │      │
+│  └─────┘  └─────┘  └─────┘      │
 └─────────────────────────────────┘
 ```
 
@@ -33,7 +40,7 @@ Flexbox a Grid ti umožňujú **kontrolovať**, ako sú tieto menšie krabice **
 
 ## 🎯 Flexbox vs Grid - Kedy čo použiť?
 
-### 💡 ZÁCHYTNÝ BOD #1: Jedna os vs. dve osi
+### 💡 Jedna os vs. dve osi
 
 **FLEXBOX** = Prvky v **jednom smere** (buď horizontálne ALEBO vertikálne)
 - Ako *vagóny vlaku* - idú za sebou v jednom smere
@@ -47,7 +54,9 @@ Flexbox a Grid ti umožňujú **kontrolovať**, ako sú tieto menšie krabice **
 
 ## 💪 FLEXBOX - Prvky v rade/stĺpci
 
-### 💡 ZÁCHYTNÝ BOD #2: Flexbox = Kontajner + Smer
+📚 **Dokumentácia:** [MDN - Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+
+### 💡 Flexbox = Kontajner + Smer
 
 1. **Povieš kontajneru:** "Buď flexbox!" → `display: flex`
 2. **Prvky sa automaticky dajú vedľa seba** (v rade)
@@ -57,9 +66,9 @@ Flexbox a Grid ti umožňujú **kontrolovať**, ako sú tieto menšie krabice **
 
 ```
 BEZ FLEXU:                  S FLEXOM:
-┌─────────────┐             ┌──────────────────────┐
+┌─────────────┐             ┌─────────────────────────────┐
 │   Prvok 1   │             │ Prvok 1 │ Prvok 2 │ Prvok 3 │
-├─────────────┤             └──────────────────────┘
+├─────────────┤             └─────────────────────────────┘
 │   Prvok 2   │             (automaticky vedľa seba!)
 ├─────────────┤
 │   Prvok 3   │
@@ -71,7 +80,7 @@ BEZ FLEXU:                  S FLEXOM:
 
 ## 💪 FLEXBOX
 
-### 💡 ZÁCHYTNÝ BOD #3: Dve dôležité osi
+### 💡 Dve dôležité osi
 
 Keď máš `flex-direction: row` (prvky vedľa seba):
 - **Hlavná os** = horizontálna (→)  
@@ -88,7 +97,7 @@ Keď máš `flex-direction: row` (prvky vedľa seba):
     └─────────────────────────────┘
 ```
 
-### 💡 ZÁCHYTNÝ BOD #4: Gap = medzery (najjednoduchšie!)
+### 💡 Gap = medzery (najjednoduchšie!)
 
 Namiesto komplikovaných `margin` na každý prvok:
 ```css
@@ -122,6 +131,8 @@ Namiesto komplikovaných `margin` na každý prvok:
 ```
 
 ✅ **Výsledok:** Linky sú pekne vedľa seba s rovnakými medzerami
+
+🔗 **Živý príklad:** [Otvoriť na JSFiddle](https://jsfiddle.net/z8qjwoxt/)
 
 ---
 
@@ -187,7 +198,9 @@ flex-wrap: wrap;                  /* Zalomenie na ďalší riadok */
 
 ## 🎨 GRID - Mriežka prvkov
 
-### 💡 ZÁCHYTNÝ BOD #5: Grid = Šachovnica
+📚 **Dokumentácia:** [MDN - CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+
+### 💡 Grid = Šachovnica
 
 Grid ti umožňuje vytvoriť **mriežku** - definuješ **stĺpce** a **riadky**, a prvky sa automaticky umiestnia.
 
@@ -201,7 +214,7 @@ Grid ti umožňuje vytvoriť **mriežku** - definuješ **stĺpce** a **riadky**,
   Stĺpec 1  Stĺpec 2  Stĺpec 3
 ```
 
-### 💡 ZÁCHYTNÝ BOD #6: Grid v 3 krokoch
+### 💡 Grid v 3 krokoch
 
 1. **Povieš kontajneru:** "Buď grid!" → `display: grid`
 2. **Definuješ stĺpce:** → `grid-template-columns: 1fr 1fr 1fr` (3 rovnaké)
@@ -211,7 +224,7 @@ Grid ti umožňuje vytvoriť **mriežku** - definuješ **stĺpce** a **riadky**,
 
 ---
 
-### 💡 ZÁCHYTNÝ BOD #7: Čarovná jednotka `fr` (fraction)
+### 💡 Čarovná jednotka `fr` (fraction)
 
 `fr` = **zlomok dostupného priestoru**
 
@@ -227,7 +240,7 @@ grid-template-columns: 1fr 2fr 1fr;
 
 ---
 
-### 💡 ZÁCHYTNÝ BOD #8: Repeat = šikovná skratka
+### 💡 Repeat = šikovná skratka
 
 Namiesto `1fr 1fr 1fr` píš:
 ```css
@@ -339,7 +352,7 @@ grid-row: span 2;     /* Roztiahnuť cez 2 riadky */
 
 ---
 
-## 🎓 Čo si zapamätať (ZÁCHYTNÉ BODY)
+## 🎓 Čo si zapamätať
 
 ### ✅ Flexbox v kocke
 1. Používaj pre **prvky v rade/stĺpci** (jedna os)
