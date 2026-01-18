@@ -51,28 +51,83 @@ Stránka, ktorá sa **automaticky prispôsobí veľkosti obrazovky** - vyzerá d
 
 ## 2️⃣ Relatívne jednotky - Prispôsobia sa obrazovke
 
-### 🎯 Prečo relatívne jednotky?
+### 🤔 Čo sú relatívne jednotky?
 
-**Fixné jednotky (px)** = nevhodné pre responzívny web  
-**Relatívne jednotky** = prispôsobia sa automaticky
+**Jednotky v CSS** = spôsob, ako určiť veľkosť (šírka, výška, veľkosť textu, medzery...)
 
-### Najdôležitejšie jednotky
+Existujú **2 typy:**
 
-#### **% (percentá)** - Relatívne k rodičovi
+#### **Fixné jednotky** (napr. `px`)
+- **Pevná veľkosť** - vždy rovnaká bez ohľadu na obrazovku
+- `font-size: 16px` = vždy 16 pixelov (na mobile aj na 4K monitore)
+- **Problém:** Na mobiloch môže byť text príliš malý/veľký, na veľkých obrazovkách nevyužiješ priestor
+
+#### **Relatívne jednotky** (%, rem, em, vw, vh)
+- **Menia sa podľa kontextu** - prispôsobia sa zariadeniu, rodičovi, alebo obrazovke
+- `width: 50%` = vždy polovica rodiča (či už je to 200px alebo 1000px)
+- `font-size: 1.5rem` = vždy 1,5× základnej veľkosti (ak sa zmení základná veľkosť, zmení sa aj toto)
+- **Výhoda:** Automaticky sa škálujú → lepšia responzívnosť
+
+---
+
+### 🎯 Prečo relatívne jednotky pre responzívny web?
+
+**Príklad problému s fixnými px:**
+
 ```css
+/* Fixné px - ZLE pre responzívnosť */
 .container {
-  width: 80%; /* 80% šírky rodiča */
+  width: 960px;  /* Na mobile (375px šírka) = horizontálny scroll! */
+  font-size: 16px; /* Na veľkom monitore = príliš malé */
 }
 ```
 
-**Použitie:** Šírky kontajnerov, layouty
+**Riešenie s relatívnymi jednotkami:**
+
+```css
+/* Relatívne - DOBRE pre responzívnosť */
+.container {
+  width: 90%;      /* Na mobile: 90% z 375px = 337px (vhodné) */
+                   /* Na desktope: 90% z 1920px = 1728px (využiješ priestor) */
+  font-size: 1rem; /* Prispôsobí sa nastaveniam prehliadača */
+}
+```
+
+**Čo sa stane:**
+- Na **mobile** (375px): kontajner má 337px → perfektne sa zmestí
+- Na **tablete** (768px): kontajner má 691px → využije priestor
+- Na **desktope** (1920px): kontajner má 1728px → široký, ale môžeš obmedziť cez `max-width`
+
+✅ **Výsledok:** Jeden CSS kód funguje na všetkých zariadeniach!
+
+---
+
+### Najdôležitejšie relatívne jednotky
+
+#### **% (percentá)** - Relatívne k veľkosti rodiča
+```css
+.rodic {
+  width: 1000px;
+}
+
+.potomok {
+  width: 50%;     /* = 500px (50% z 1000px) */
+}
+```
+
+**Ako sa prispôsobujú:**
+- Ak sa zmení rodič na 500px → potomok bude 250px (stále 50%)
+- Na mobile (rodič 375px) → potomok bude 187.5px
+- **Automaticky reaguje na zmenu rodiča!**
+
+**Použitie:** Šírky kontajnerov (krabíc), layouty
 
 ---
 
 #### **rem** - Relatívne k veľkosti písma v `<html>`
 ```css
 html {
-  font-size: 16px; /* Základná veľkosť */
+  font-size: 16px; /* Základná veľkosť písma v prehliadačoch */
 }
 
 h1 {
@@ -83,6 +138,15 @@ h1 {
   margin: 1.5rem; /* = 24px (1.5 × 16px) */
 }
 ```
+
+**Ako sa prispôsobujú:**
+- Ak používateľ v prehliadači zväčší písmo (nastavenia prístupnosti stránky) → všetko s `rem` sa automaticky zväčší
+- Zmeniš `html { font-size: 20px }` → celá stránka sa zväčší proporcionálne
+- **Jeden centrálny bod ovládania veľkostí!**
+
+**Prečo je to dobré:**
+- Starší ľudia si môžu zväčšiť text → stránka zostane prehľadná
+- Zmeniš dizajn (väčšie písmo všade) → zmeníš len 1 riadok v CSS
 
 **Použitie:** Písmo, medzery, padding  
 **Výhoda:** Zmeniš 1 miesto (html) → zmení sa celá stránka
@@ -105,7 +169,7 @@ h1 {
 
 ---
 
-#### **vw / vh** - Relatívne k šírke/výške obrazovky
+#### **vw / vh** - Relatívne k šírke/výške viewportu (obrazovky)
 ```css
 .hero {
   width: 100vw;  /* 100% šírky viewportu */
@@ -117,28 +181,23 @@ h1 {
 }
 ```
 
-**Použitie:** Hero sekcie na celú obrazovku, responzívne písmo
+**Ako sa prispôsobujú:**
+- `100vw` na mobile (375px) = 375px široké
+- `100vw` na desktope (1920px) = 1920px široké
+- `100vh` = vždy plná výška obrazovky (bez scrollovania)
+- **Reaguje priamo na veľkosť okna prehliadača!**
 
----
-
-### 📝 Odporúčanie
-
+**Praktický príklad:**
 ```css
-/* ✅ DOBRE - Responzívne */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  padding: 2rem;
-  font-size: 1rem;
-}
-
-/* ❌ ZLE - Fixné */
-.container {
-  width: 960px;
-  padding: 32px;
-  font-size: 16px;
+/* Hero sekcia vždy cez celú obrazovku */
+.hero {
+  height: 100vh; /* Na mobile aj desktope plná výška */
+  background: url('bg.jpg');
 }
 ```
+```
+
+**Použitie:** Hero sekcie na celú obrazovku, responzívne písmo
 
 ---
 
