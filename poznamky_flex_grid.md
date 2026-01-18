@@ -1,18 +1,7 @@
-# Flexbox a Grid - Rozloženie prvkov na stránke
+# Responzívny web - Kompletný návod
 
-## 🤔 Prečo vôbec Flexbox a Grid?
+## 🤔 Čo je responzívna stránka?
 
-### Problém: Ako prvky usporiadať na stránke?
-
-Kedysi sa na rozloženie stránky používali **tabuľky** (`<table>`) alebo **float**. To bolo náročné, neprehľadné a nefungovalo to dobre na mobiloch.
-
-**Flexbox a Grid** sú moderné nástroje, ktoré **zjednodušujú rozloženie prvkov** - vďaka nim môžeš:
-- ✅ Jednoducho dať prvky vedľa seba
-- ✅ Vytvoriť mriežku produktov/obrázkov
-- ✅ Vycentrovať čokoľvek (horizontálne aj vertikálne)
-- ✅ Vytvoriť responzívne stránky bez komplikácií
-
-**Čo je responzívna stránka?**  
 Stránka, ktorá sa **automaticky prispôsobí veľkosti obrazovky** - vyzerá dobre na PC, tablete aj mobile.
 
 **Rozdiel:**
@@ -21,26 +10,175 @@ Stránka, ktorá sa **automaticky prispôsobí veľkosti obrazovky** - vyzerá d
 
 ---
 
-## 📦 Základná myšlienka
+## 🎯 Čo potrebuješ na responzívny web? (v poradí dôležitosti)
 
-Predstav si **krabicu** (kontajner), v ktorej máš **menšie krabice** (prvky).
+### 1️⃣ Viewport meta tag (POVINNÉ!)
+### 2️⃣ Relatívne jednotky (%, rem, em)
+### 3️⃣ max-width na kontajneroch
+### 4️⃣ Flexbox a Grid (automatické rozloženie)
+### 5️⃣ Media queries (breakpoints)
+### 6️⃣ Responzívne obrázky
 
-Flexbox a Grid ti umožňujú **kontrolovať**, ako sú tieto menšie krabice **rozložené** v tej veľkej.
+---
 
+## 1️⃣ Viewport meta tag - BEZ TOHTO TO NEFUNGUJE!
+
+### 🚨 Najdôležitejšia vec!
+
+**Pridaj do `<head>` každej stránky:**
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 ```
-┌─────────────────────────────────┐
-│  KONTAJNER                      │
-│  ┌─────┐  ┌─────┐  ┌─────┐      │
-│  │  1  │  │  2  │  │  3  │      │
-│  └─────┘  └─────┘  └─────┘      │
-└─────────────────────────────────┘
+
+**Čo to robí:**
+- Povie mobile prehliadaču: "Používaj šírku zariadenia, nie desktop šírku"
+- Bez tohto mobile zobrazuje desktop verziu zmenšenú → nečitateľné
+
+**Príklad:**
+```html
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moja stránka</title>
+</head>
+```
+
+✅ **Zapamätaj si:** Vždy ako prvé!
+
+---
+
+## 2️⃣ Relatívne jednotky - Prispôsobia sa obrazovke
+
+### 🎯 Prečo relatívne jednotky?
+
+**Fixné jednotky (px)** = nevhodné pre responzívny web  
+**Relatívne jednotky** = prispôsobia sa automaticky
+
+### Najdôležitejšie jednotky
+
+#### **% (percentá)** - Relatívne k rodičovi
+```css
+.container {
+  width: 80%; /* 80% šírky rodiča */
+}
+```
+
+**Použitie:** Šírky kontajnerov, layouty
+
+---
+
+#### **rem** - Relatívne k veľkosti písma v `<html>`
+```css
+html {
+  font-size: 16px; /* Základná veľkosť */
+}
+
+h1 {
+  font-size: 2rem; /* = 32px (2 × 16px) */
+}
+
+.spacing {
+  margin: 1.5rem; /* = 24px (1.5 × 16px) */
+}
+```
+
+**Použitie:** Písmo, medzery, padding  
+**Výhoda:** Zmeniš 1 miesto (html) → zmení sa celá stránka
+
+---
+
+#### **em** - Relatívne k veľkosti písma rodiča
+```css
+.parent {
+  font-size: 20px;
+}
+
+.child {
+  font-size: 1.5em; /* = 30px (1.5 × 20px) */
+}
+```
+
+**Použitie:** Menej časté, môže byť mätúce  
+**Lepšie použiť:** rem
+
+---
+
+#### **vw / vh** - Relatívne k šírke/výške obrazovky
+```css
+.hero {
+  width: 100vw;  /* 100% šírky viewportu */
+  height: 100vh; /* 100% výšky viewportu */
+}
+
+.responsive-text {
+  font-size: 4vw; /* 4% šírky obrazovky */
+}
+```
+
+**Použitie:** Hero sekcie na celú obrazovku, responzívne písmo
+
+---
+
+### 📝 Odporúčanie
+
+```css
+/* ✅ DOBRE - Responzívne */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  padding: 2rem;
+  font-size: 1rem;
+}
+
+/* ❌ ZLE - Fixné */
+.container {
+  width: 960px;
+  padding: 32px;
+  font-size: 16px;
+}
 ```
 
 ---
 
-## 🎯 Flexbox vs Grid - Kedy čo použiť?
+## 3️⃣ max-width - Kontrola maximálnej šírky
 
-### 💡 Jedna os vs. dve osi
+### 🎯 Prečo max-width?
+
+Na veľkých obrazovkách (4K monitor) nechceš, aby text bol široký cez celú obrazovku → nečitateľné.
+
+### Použitie
+
+```css
+.container {
+  width: 90%;           /* Na malých zariadeniach: 90% šírky */
+  max-width: 1200px;    /* Na veľkých: max. 1200px */
+  margin: 0 auto;       /* Centrovanie */
+}
+```
+
+**Ako to funguje:**
+- Mobile (375px): šírka = 90% z 375px = 337px
+- Tablet (768px): šírka = 90% z 768px = 691px  
+- Desktop (1920px): šírka = max-width = 1200px (nie 90% = 1728px)
+
+### Responzívne obrázky
+
+```css
+img {
+  max-width: 100%;  /* Nikdy nepresiahne kontajner */
+  height: auto;     /* Zachová proporcie */
+}
+```
+
+✅ **Toto pridaj na začiatok každého CSS!**
+
+---
+
+## 4️⃣ FLEXBOX a GRID - Automatické rozloženie
+
+### 🎯 Flexbox vs Grid - Kedy čo použiť?
 
 **FLEXBOX** = Prvky v **jednom smere** (buď horizontálne ALEBO vertikálne)
 - Ako *vagóny vlaku* - idú za sebou v jednom smere
@@ -132,7 +270,7 @@ Namiesto komplikovaných `margin` na každý prvok:
 
 ✅ **Výsledok:** Linky sú pekne vedľa seba s rovnakými medzerami
 
-🔗 **Živý príklad:** [Otvoriť na JSFiddle](https://jsfiddle.net/z8qjwoxt/)
+🔗 **Živý príklad:** [Skopíruj kód na JSFiddle](https://jsfiddle.net/z)
 
 ---
 
@@ -340,6 +478,245 @@ grid-row: span 2;     /* Roztiahnuť cez 2 riadky */
 
 ---
 
+## 5️⃣ MEDIA QUERIES - Breakpoints pre rôzne zariadenia
+
+### 🎯 Čo sú media queries?
+
+**Podmienené CSS** - rôzne štýly pre rôzne veľkosti obrazovky.
+
+```css
+/* Základné štýly (mobile first) */
+.container {
+  width: 100%;
+  padding: 1rem;
+}
+
+/* Na tabletoch (od 768px) */
+@media (min-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 2rem;
+  }
+}
+
+/* Na desktopoch (od 1024px) */
+@media (min-width: 1024px) {
+  .container {
+    width: 80%;
+    max-width: 1200px;
+    padding: 3rem;
+  }
+}
+```
+
+---
+
+### 📱 Štandardné breakpoints
+
+```css
+/* Mobile (predvolené, bez media query) */
+/* 0px - 767px */
+
+/* Tablet */
+@media (min-width: 768px) {
+  /* štýly pre tablety */
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  /* štýly pre desktopy */
+}
+
+/* Veľký desktop */
+@media (min-width: 1440px) {
+  /* štýly pre veľké obrazovky */
+}
+```
+
+**💡 Tip:** Použi `min-width` (mobile first prístup) - je lepší ako `max-width`
+
+---
+
+### 🎯 Praktické príklady Media Queries
+
+#### Príklad 1: Responzívna navigácia
+
+```css
+/* Mobile - pod sebou */
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Desktop - vedľa seba */
+@media (min-width: 768px) {
+  .nav {
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+```
+
+---
+
+#### Príklad 2: Zmena počtu stĺpcov
+
+```css
+/* Mobile - 1 stĺpec */
+.produkty {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* Tablet - 2 stĺpce */
+@media (min-width: 768px) {
+  .produkty {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Desktop - 3 stĺpce */
+@media (min-width: 1024px) {
+  .produkty {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+```
+
+---
+
+#### Príklad 3: Responzívne písmo
+
+```css
+/* Mobile */
+h1 {
+  font-size: 1.5rem; /* 24px */
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2rem; /* 32px */
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 2.5rem; /* 40px */
+  }
+}
+```
+
+---
+
+#### Príklad 4: Skryť/zobraziť prvky
+
+```css
+/* Mobilné menu - zobrazené */
+.mobile-menu {
+  display: block;
+}
+
+/* Desktop menu - skryté */
+.desktop-menu {
+  display: none;
+}
+
+/* Na desktope naopak */
+@media (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+  
+  .desktop-menu {
+    display: flex;
+  }
+}
+```
+
+---
+
+### 📝 Kompletný príklad responzívnej stránky
+
+```html
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responzívna stránka</title>
+  <style>
+    /* Reset a základné štýly */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    /* Kontajner */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    
+    /* Produkty - mobile */
+    .produkty {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    
+    /* Produkty - tablet */
+    @media (min-width: 768px) {
+      .container {
+        padding: 2rem;
+      }
+      
+      .produkty {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+    }
+    
+    /* Produkty - desktop */
+    @media (min-width: 1024px) {
+      .container {
+        padding: 3rem;
+      }
+      
+      .produkty {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="produkty">
+      <div class="produkt">Produkt 1</div>
+      <div class="produkt">Produkt 2</div>
+      <div class="produkt">Produkt 3</div>
+    </div>
+  </div>
+</body>
+</html>
+```
+
+---
+
 ## 📊 Rýchle porovnanie
 
 | **Otázka** | **Flexbox** | **Grid** |
@@ -352,7 +729,40 @@ grid-row: span 2;     /* Roztiahnuť cez 2 riadky */
 
 ---
 
-## 🎓 Čo si zapamätať
+## 🎓 Zhrnutie - Kompletný checklist pre responzívny web
+
+### ✅ Povinné (musíš mať!)
+
+1. **Viewport meta tag**
+   ```html
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   ```
+
+2. **Relatívne jednotky**
+   ```css
+   width: 90%;
+   padding: 2rem;
+   font-size: 1rem;
+   ```
+
+3. **max-width + centrovanie**
+   ```css
+   .container {
+     width: 90%;
+     max-width: 1200px;
+     margin: 0 auto;
+   }
+   ```
+
+4. **Responzívne obrázky**
+   ```css
+   img {
+     max-width: 100%;
+     height: auto;
+   }
+   ```
+
+---
 
 ### ✅ Flexbox v kocke
 1. Používaj pre **prvky v rade/stĺpci** (jedna os)
@@ -368,16 +778,24 @@ grid-row: span 2;     /* Roztiahnuť cez 2 riadky */
 4. Responzívne: `repeat(auto-fit, minmax(250px, 1fr))`
 5. Ideálne pre: **galérie, produkty, layouty**
 
+### ✅ Media Queries v kocke
+1. Mobile first prístup
+2. Štandardné breakpoints: 768px (tablet), 1024px (desktop)
+3. Syntax: `@media (min-width: 768px) { /* štýly */ }`
+4. Používaj na: zmenu layoutu, veľkosti písma, skrývanie prvkov
+
 ---
 
 ## 💡 Praktické tipy
 
-1. **Pre navigáciu** → Flexbox
-2. **Pre galériu obrázkov** → Grid
-3. **Pre centrovanie jedného prvku** → Flexbox
-4. **Pre rozloženie celej stránky** → Grid (alebo oboje!)
-5. **Gap je tvoj priateľ** - používaj ho namiesto margin
-6. **Môžeš kombinovať!** Grid pre layout stránky, Flex pre navigáciu vnútri
+1. **Vždy začni s viewport meta tagom!**
+2. **Použi relatívne jednotky** namiesto px
+3. **Pre navigáciu** → Flexbox
+4. **Pre galériu obrázkov** → Grid s `auto-fit, minmax()`
+5. **Pre centrovanie** → Flexbox
+6. **Gap je tvoj priateľ** - používaj ho namiesto margin
+7. **Mobile first** - najprv mobile štýly, potom media queries
+8. **Testuj na mobile!** - Ctrl+Shift+M v Chrome/Firefox
 
 ---
 
@@ -404,6 +822,16 @@ justify-content: space-between;
 align-items: center;
 ```
 
+### 4. Responzívny kontajner (vždy!)
+```css
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+```
+
 ---
 
 ## 🎯 Praktická rada na záver
@@ -411,5 +839,35 @@ align-items: center;
 **Keď nevieš, ktorý použiť:**
 - Ak uvažuješ **"vedľa seba"** → **Flexbox**
 - Ak uvažuješ **"v mriežke"** → **Grid**
+- Ak potrebuješ **rôzne štýly na mobile/desktop** → **Media queries**
 
-**A nezabudni:** Obidva používajú `gap` na medzery a obidva sú jednoduché, keď pochopíš základnú myšlienku! 🎉
+**Základná kostra každej responzívnej stránky:**
+
+```html
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moja stránka</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    img { max-width: 100%; height: auto; }
+    
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Tvoj obsah -->
+  </div>
+</body>
+</html>
+```
+
+**A nezabudni:** Testuj na mobile! 📱
