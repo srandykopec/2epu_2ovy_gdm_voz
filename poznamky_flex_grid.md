@@ -329,7 +329,7 @@ Namiesto komplikovaných `margin` na každý prvok:
 
 ✅ **Výsledok:** Linky sú pekne vedľa seba s rovnakými medzerami
 
-🔗 **Živý príklad:** [Skopíruj kód na JSFiddle](https://jsfiddle.net/z)
+🔗 **Živý príklad:** [Skopíruj kód na JSFiddle](https://jsfiddle.net/)
 
 ---
 
@@ -378,14 +378,14 @@ align-items: center;              /* Zarovnanie na krížovej osi */
 flex-wrap: wrap;                  /* Zalomenie na ďalší riadok */
 ```
 
-**Hodnoty pre justify-content:**
+**Hodnoty pre [justify-content](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/justify-content):**
 - `flex-start` - na začiatok (vľavo)
 - `center` - na stred
 - `flex-end` - na koniec (vpravo)
 - `space-between` - rovnomerne, okraje prilepené
 - `space-around` - rovnomerne, malé medzery aj pri okrajoch
 
-**Hodnoty pre align-items:**
+**Hodnoty pre [align-items](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/align-items):**
 - `stretch` - natiahnuté cez celú výšku
 - `center` - na stred
 - `flex-start` - hore
@@ -537,36 +537,138 @@ grid-row: span 2;     /* Roztiahnuť cez 2 riadky */
 
 ---
 
-## 5️⃣ MEDIA QUERIES - Breakpoints pre rôzne zariadenia
+## 5️⃣ MEDIA QUERIES - Rôzne štýly pre rôzne zariadenia
+
+### 🤔 Problém: Prečo vôbec media queries?
+
+Predstav si situáciu:
+
+**Na mobile (375px šírka):**
+- Chceš navigáciu **pod sebou** (zoznam)
+- Chceš produkty **1 v rade** (zmestí sa len jeden)
+- Chceš **menšie písmo** (málo miesta)
+
+**Na desktope (1920px šírka):**
+- Chceš navigáciu **vedľa seba** (horizontálne menu)
+- Chceš produkty **3-4 v rade** (využiješ priestor)
+- Chceš **väčšie písmo** (lepšia čitateľnosť)
+
+**Problém:** Jeden CSS nemôže vedieť, či je používateľ na mobile alebo PC!
+
+**Riešenie:** **Media queries** = "Ak je obrazovka väčšia ako X, aplikuj tieto štýly"
+
+---
 
 ### 🎯 Čo sú media queries?
 
-**Podmienené CSS** - rôzne štýly pre rôzne veľkosti obrazovky.
+**Podmienky v CSS** - povieš: "Ak je obrazovka aspoň 768px široká, urob toto..."
+
+**Vizualizácia:**
+
+```
+Mobile (do 767px)          Tablet (768px+)         Desktop (1024px+)
+┌─────────────┐           ┌──────────────┐        ┌───────────────────┐
+│   Menu      │           │ Menu vedľa   │        │ Menu | Logo | ... │
+│   ────      │           │              │        │                   │
+│   Logo      │           │ ┌──┐  ┌──┐   │        │ ┌──┐ ┌──┐ ┌──┐    │
+│   ────      │           │ │P1│  │P2│   │        │ │P1│ │P2│ │P3│    │
+│             │           │ └──┘  └──┘   │        │ └──┘ └──┘ └──┘    │
+│  ┌───────┐  │           │ ┌──┐  ┌──┐   │        │ ┌──┐ ┌──┐ ┌──┐    │
+│  │Produkt│  │           │ │P3│  │P4│   │        │ │P4│ │P5│ │P6│    │
+│  └───────┘  │           │ └──┘  └──┘   │        │ └──┘ └──┘ └──┘    │
+└─────────────┘           └──────────────┘        └───────────────────┘
+1 stĺpec                  2 stĺpce               3 stĺpce
+```
+
+---
+
+### 📏 Čo sú BREAKPOINTS?
+
+**Breakpoint** = **bod zlomu** = šírka, pri ktorej sa dizajn zmení
+
+**Štandardné breakpoints:**
+- **768px** = hranica medzi mobile a tabletom  
+  (prečo? väčšina tabletov má 768px+)
+- **1024px** = hranica medzi tabletom a desktopom  
+  (prečo? väčšina desktopov má 1024px+)
+
+**Analógia:**
+Breakpoint = ako "vypínač svetla" - keď dosiahneš určitú šírku, "prepne sa" dizajn.
+
+---
+
+### 💡 Ako fungujú media queries?
+
+**Syntax:**
+```css
+@media (min-width: 768px) {
+  /* Štýly, ktoré sa aplikujú, AK je obrazovka aspoň 768px široká */
+}
+```
+
+**Praktický príklad - Navigácia:**
 
 ```css
-/* Základné štýly (mobile first) */
-.container {
-  width: 100%;
-  padding: 1rem;
+/* 1. MOBILE - základné štýly (bez media query) */
+.nav {
+  flex-direction: column; /* Pod sebou */
+  font-size: 1rem;        /* Menšie písmo */
 }
 
-/* Na tabletoch (od 768px) */
+/* 2. TABLET a väčšie (od 768px) */
 @media (min-width: 768px) {
-  .container {
-    width: 90%;
-    padding: 2rem;
-  }
-}
-
-/* Na desktopoch (od 1024px) */
-@media (min-width: 1024px) {
-  .container {
-    width: 80%;
-    max-width: 1200px;
-    padding: 3rem;
+  .nav {
+    flex-direction: row;  /* Vedľa seba */
+    font-size: 1.2rem;    /* Väčšie písmo */
   }
 }
 ```
+
+**Čo sa stane:**
+- **Na mobile (375px):** Navigácia je pod sebou, malé písmo  
+  (media query sa NEaplikuje, lebo 375px < 768px)
+- **Na tablete (768px):** Navigácia je vedľa seba, väčšie písmo  
+  (media query SA aplikuje, lebo 768px ≥ 768px)
+- **Na desktope (1920px):** Rovnaké ako tablet  
+  (media query SA aplikuje, lebo 1920px ≥ 768px)
+
+---
+
+### 🎯 Reálny príklad - E-shop produkty
+
+**Úloha:** Na mobile 1 produkt v rade, na tablete 2, na desktope 3.
+
+```css
+/* MOBILE (predvolené) - 1 stĺpec */
+.produkty {
+  display: grid;
+  grid-template-columns: 1fr; /* Jeden stĺpec */
+  gap: 1rem;
+}
+
+/* TABLET (od 768px) - 2 stĺpce */
+@media (min-width: 768px) {
+  .produkty {
+    grid-template-columns: repeat(2, 1fr); /* Dva stĺpce */
+    gap: 1.5rem;
+  }
+}
+
+/* DESKTOP (od 1024px) - 3 stĺpce */
+@media (min-width: 1024px) {
+  .produkty {
+    grid-template-columns: repeat(3, 1fr); /* Tri stĺpce */
+    gap: 2rem;
+  }
+}
+```
+
+**Výsledok:**
+- Mobile (375px): [Produkt] → 1 v rade
+- Tablet (768px): [Produkt] [Produkt] → 2 v rade
+- Desktop (1920px): [Produkt] [Produkt] [Produkt] → 3 v rade
+
+**Všetko automaticky!** Stránka sa sama "prispôsobí" veľkosti obrazovky.
 
 ---
 
@@ -788,7 +890,7 @@ h1 {
 
 ---
 
-## 🎓 Zhrnutie - Kompletný checklist pre responzívny web
+## 🎓 Zhrnutie - responzívny web
 
 ### ✅ Povinné (musíš mať!)
 
