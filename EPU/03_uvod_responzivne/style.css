@@ -72,3 +72,33 @@ button:hover {
     transform: translateY(-2px);
 }
 
+
+@media (min-width: 768px) {
+  /* Štýly, ktoré sa aplikujú, AK je obrazovka aspoň 768px široká */
+
+  .card{
+    background-color: #3498db;
+    border: 2px solid white;
+  }
+  
+  .card h2{
+    font-size: 1.5rem;
+
+  }
+}
+
+
+@media (min-width: 1024px) {
+  /* Štýly, ktoré sa aplikujú, AK je obrazovka aspoň 1024 široká */
+
+  main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .card{
+    background-color: #bada55;
+    border: 2px solid white;
+  }
+}
