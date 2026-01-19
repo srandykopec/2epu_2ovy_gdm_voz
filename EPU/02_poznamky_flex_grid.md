@@ -1002,33 +1002,5 @@ align-items: center;
 - Ak uvažuješ **"v mriežke"** → **Grid**
 - Ak potrebuješ **rôzne štýly na mobile/desktop** → **Media queries**
 
-**Základná kostra každej responzívnej stránky:**
-
-```html
-<!DOCTYPE html>
-<html lang="sk">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Moja stránka</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    img { max-width: 100%; height: auto; }
-    
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <!-- Tvoj obsah -->
-  </div>
-</body>
-</html>
-```
 
 **A nezabudni:** Testuj na mobile! 📱
