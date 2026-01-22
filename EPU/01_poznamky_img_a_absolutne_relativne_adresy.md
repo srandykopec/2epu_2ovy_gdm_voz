@@ -4,7 +4,81 @@
 
 ---
 
-## 🗂️ ČASŤ 1: Relatívne vs Absolútne cesty (NAJDÔLEŽITEJŠIE!)
+
+
+## 🔗 ČASŤ 1: Element `<a>` - Odkazy (Linky)
+
+### 📖 Čo to je?
+
+Element `<a>` (anchor = kotva) slúži na **vytváranie odkazov**, ktoré používateľ môže kliknúť.
+
+**📚 MDN dokumentácia:** [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a)
+
+---
+
+### 1️⃣ **Základný odkaz na inú stránku**
+
+```html
+<a href="./about.html">O nás</a>
+<a href="./kontakt/index.html">Kontakt</a>
+```
+
+**Atribúty:**
+- `href` = **hyper-reference** (adresa, kam odkaz vedie)
+- Text medzi `<a>` a `</a>` = **to, na čo užívateľ klikne**
+
+---
+
+### 2️⃣ **Odkaz na externú stránku**
+
+```html
+<a href="https://www.google.com">Google</a>
+<a href="https://www.youtube.com">YouTube</a>
+```
+
+---
+
+### 3️⃣ **Odkaz na sekciu na tej istej stránke** (kotva)
+
+```html
+<!-- Odkaz: -->
+<a href="#kontakt">Preskočiť na kontakt</a>
+
+<!-- Cieľ (niekde nižšie na stránke): -->
+<section id="kontakt">
+    <h2>Kontakt</h2>
+    <p>Zavolaj nám: 0900 123 456</p>
+</section>
+```
+
+**Princíp:**
+- `href="#meno-id"` = skoč na element s `id="meno-id"`
+- Používa sa na **navigáciu v rámci dlhej stránky**
+
+---
+
+### 4️⃣ **Odkaz na email**
+
+```html
+<a href="mailto:info@example.com">Napíš nám email</a>
+```
+
+Kliknutím sa otvorí emailový klient (Outlook, Gmail, atď.)
+
+---
+
+### 5️⃣ **Odkaz na telefónne číslo**
+
+```html
+<a href="tel:+421900123456">Zavolaj nám</a>
+```
+
+Na mobile sa po kliknutí spustí vytáčanie!
+
+---
+
+
+## 🗂️ ČASŤ 2: Relatívne vs Absolútne cesty (NAJDÔLEŽITEJŠIE!)
 
 ### 🤔 Prečo to potrebuješ vedieť?
 
@@ -71,14 +145,14 @@ moj-web/               ← KOREŇ projektu (hlavný priečinok, alebo aj root)
 
 ### 3️⃣ **Relatívna cesta od aktuálneho súboru** (NAJPOUŽÍVANEJŠIA! ⭐)
 
-#### **a) Súbor v tom istom priečinku** → použij `./`
+#### **a) Súbor v tom istom priečinku** 
 
 ```html
 <!-- Ak si v index.html a about.html je vedľa neho: -->
-<a href="./about.html">O nás</a>
+<a href="about.html">O nás</a>
 ```
 
-**Prax:** Odporúča sa písať `./` pred názvom súboru pre lepšiu čitateľnosť a explicitnosť.
+
 
 #### **b) Súbor v podpriečinku** → použi názov priečinka
 
@@ -119,7 +193,7 @@ Predstav si, že tvoj webový projekt je **veľká knižnica s oddeleniami**.
 ### **Scenár 1:** Si v `index.html`, chceš pridať logo z priečinka `images/`
 
 ```html
-<img src="./images/logo.png" alt="Logo firmy">
+<img src="images/logo.png" alt="Logo firmy">
 ```
 
 ### **Scenár 2:** Si v `kontakt/kontakt.html`, chceš logo z priečinka `images/`
@@ -232,74 +306,6 @@ moj-web/
 
 ---
 
-## 🔗 ČASŤ 2: Element `<a>` - Odkazy (Linky)
-
-### 📖 Čo to je?
-
-Element `<a>` (anchor = kotva) slúži na **vytváranie odkazov**, ktoré používateľ môže kliknúť.
-
-**📚 MDN dokumentácia:** [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a)
-
----
-
-### 1️⃣ **Základný odkaz na inú stránku**
-
-```html
-<a href="./about.html">O nás</a>
-<a href="./kontakt/index.html">Kontakt</a>
-```
-
-**Atribúty:**
-- `href` = **hyper-reference** (adresa, kam odkaz vedie)
-- Text medzi `<a>` a `</a>` = **to, na čo užívateľ klikne**
-
----
-
-### 2️⃣ **Odkaz na externú stránku**
-
-```html
-<a href="https://www.google.com">Google</a>
-<a href="https://www.youtube.com">YouTube</a>
-```
-
----
-
-### 3️⃣ **Odkaz na sekciu na tej istej stránke** (kotva)
-
-```html
-<!-- Odkaz: -->
-<a href="#kontakt">Preskočiť na kontakt</a>
-
-<!-- Cieľ (niekde nižšie na stránke): -->
-<section id="kontakt">
-    <h2>Kontakt</h2>
-    <p>Zavolaj nám: 0900 123 456</p>
-</section>
-```
-
-**Princíp:**
-- `href="#meno-id"` = skoč na element s `id="meno-id"`
-- Používa sa na **navigáciu v rámci dlhej stránky**
-
----
-
-### 4️⃣ **Odkaz na email**
-
-```html
-<a href="mailto:info@example.com">Napíš nám email</a>
-```
-
-Kliknutím sa otvorí emailový klient (Outlook, Gmail, atď.)
-
----
-
-### 5️⃣ **Odkaz na telefónne číslo**
-
-```html
-<a href="tel:+421900123456">Zavolaj nám</a>
-```
-
-Na mobile sa po kliknutí spustí vytáčanie!
 
 ---
 
@@ -361,7 +367,6 @@ Element `<img>` slúži na **vloženie obrázka** priamo do HTML stránky.
 ## 🎯 Zhrnutie
 
 ### **Relatívne cesty:**
-- `./` = aktuálny priečinok
 - `../` = o úroveň vyššie
 - `../../` = dve úrovne vyššie
 
@@ -377,11 +382,5 @@ Element `<img>` slúži na **vloženie obrázka** priamo do HTML stránky.
 <img src="./images/logo.png" alt="Logo">
 ```
 
-### **CSS pozadie:**
-```css
-.hero {
-    background-image: url('./images/bg.jpg');
-    background-size: cover;
-    background-position: center;
-}
+
 ```
