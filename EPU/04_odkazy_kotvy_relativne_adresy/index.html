@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Moje Portfólio</title>
 </head>
 <body>
@@ -12,19 +13,17 @@
         <div class="container">
             <h1 class="nav__logo">Moje Portfolio</h1>
             <ul class="nav__list">
-                <!-- TODO: dopln zoznam a pridaj odkazy na sekcie pomocou #id -->
-            
-                
-
-
-
+              <li><a href="#uvod">Úvod</a></li>
+              <li><a href="#omne">O mne</a></li>
+              <li><a href="#portfolio">Portfólio</a></li>
+              <li><a href="#kontakt">Kontakt</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- HERO SEKCIA s obrázkom na pozadí -->
     <!--  V CSS pridaj background-image s relatívnou adresou -->
-    <header class="hero">
+    <header class="hero" id="uvod">
         <div class="hero__content">
             <h1>Vitaj na mojej stránke!</h1>
             <p>Som webový vývojár a toto je moje portfólio</p>
@@ -34,7 +33,7 @@
     </header>
 
     <!-- SEKCIA: O MNE -->
-    <section class="about">
+    <section class="about" id="omne">
         <div class="container">
             <h2>O mne</h2>
             <div class="about__content">
@@ -50,7 +49,7 @@
     </section>
 
     <!-- SEKCIA: PORTFÓLIO -->
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <div class="container">
             <h2>Moje projekty</h2>
             <div class="portfolio__grid">
@@ -84,7 +83,7 @@
     </section>
 
     <!-- SEKCIA: KONTAKT -->
-    <section class="contact">
+    <section class="contact" id="kontakt">
         <div class="container">
             <h2>Kontakt</h2>
             <p>Máš záujem o spoluprácu? Napíš mi!</p>
@@ -106,7 +105,7 @@
 
             <!-- Odkaz späť hore -->
             <!-- : Pridaj odkaz na sekciu #uvod -->
-            <a href="" class="contact__btn-back"> Späť hore</a>
+            <a href="" class="contact__btn-back" id="uvod"> Späť hore</a>
         </div>
     </section>
 
