@@ -18,7 +18,7 @@ html {
 
 .container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto;  /* obsah na stred*/
     padding: 0 2rem;
 }
 
@@ -64,7 +64,7 @@ html {
 /* ===== HERO SEKCIA ===== */
 .hero {
     /* Pridaj hero.jpg ako background-image background-image:  */
-    
+    background-image: url(../images/hero.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
