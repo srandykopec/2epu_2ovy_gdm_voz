@@ -1,0 +1,45 @@
+ html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+main{
+    height: 100%;
+    margin: 0;
+    border: 2px orange solid;   
+}
+
+p{
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px;
+}
+
+/* Farby elementov */
+.prvy{
+    background-color: plum;
+    order: 2;
+    align-self: flex-end;
+}
+
+.druhy{
+    background-color: burlywood;
+    order: 3;
+
+}
+
+.treti{
+    background-color: cyan;
+    order: 1;
+
+}
+
+.stvrty{
+    background-color: lightcoral;
+}
+
+.piaty{
+    background-color: lightgreen;
+}
