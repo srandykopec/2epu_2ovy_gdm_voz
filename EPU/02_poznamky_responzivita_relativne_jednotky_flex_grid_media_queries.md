@@ -231,8 +231,6 @@ img {
 }
 ```
 
-✅ **Toto pridaj na začiatok každého CSS!**
-
 ---
 
 ## 4️⃣ FLEXBOX a GRID - Automatické rozloženie
@@ -252,6 +250,8 @@ img {
 ## 💪 FLEXBOX - Prvky v rade/stĺpci
 
 📚 **Dokumentácia:** [MDN - Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+
+💐 **Poster:** [Css flexbox poster](https://github.com/srandykopec/2epu_2ovy_gdm_voz/blob/143df728dfb6df8625fb74a178892d449d6e3857/EPU/02_css-flexbox-poster.png)
 
 ### 💡 Flexbox = Kontajner + Smer
 
@@ -397,7 +397,12 @@ flex-wrap: wrap;                  /* Zalomenie na ďalší riadok */
 
 📚 **Dokumentácia:** [MDN - CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
 
+💐 **Poster:** [Css flexbox poster](https://github.com/srandykopec/2epu_2ovy_gdm_voz/blob/143df728dfb6df8625fb74a178892d449d6e3857/EPU/02_css-grid-poster.png)
+
 ### 💡 Grid = Šachovnica
+
+
+
 
 Grid ti umožňuje vytvoriť **mriežku** - definuješ **stĺpce** a **riadky**, a prvky sa automaticky umiestnia.
 
