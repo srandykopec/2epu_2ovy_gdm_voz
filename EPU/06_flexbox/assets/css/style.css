@@ -11,8 +11,8 @@ main{
     border: 2px orange solid;   
     display: flex;
     flex-direction: column;
-    justify-content: center   ;
-    align-items: center  ;
+    justify-content: center   ; /*hlavná os podľa flex-direction*/
+    align-items: center  ;   /*vedľajšia os podľa flex-direction
     /* flex-wrap: wrap; */
 }
 
@@ -25,7 +25,7 @@ p{
 /* Farby elementov */
 .prvy{
     background-color: plum;
-    order: 5;
+    order: 5; /*poradie elementov*/
 
    }
 
