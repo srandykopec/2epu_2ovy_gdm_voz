@@ -1,0 +1,30 @@
+body, html{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    /* height: 100%; */
+}
+
+.containter{
+    display: grid;
+ 
+    }
+
+    
+.item1{
+    grid-row: 1 / 4;
+    background-color: mediumaquamarine; 
+}
+.item2{background-color: plum;}
+.item3{background-color: cornflowerblue; }
+.item4{background-color: #fffc40; }
+.item5{background-color: #7a7a7a; }
+.item6{
+    grid-column: 3 / 5;
+    background-color: plum;}
+.item7{background-color: cornflowerblue; }
+.item8{background-color: #fffc40; }
+.item9{background-color: #7a7a7a; }
+    
