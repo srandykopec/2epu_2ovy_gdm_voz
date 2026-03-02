@@ -18,6 +18,10 @@
   --pozadie-svetla: #f9fafb;
   
   /* Spacing */
+  --medzera-s: 1rem;
+  --medzera-m: 1.5rem;
+  --medzera-l: 2rem;
+  --medzera-xl: 3rem;
   
   /* Typography */
   --font-nadpis: 'Montserrat', sans-serif;
@@ -31,6 +35,7 @@ body{
   color: var(--text-tmavy);
   background-color: var(--pozadie-biela);
   font-family: var(--font-body);
+  font-size: var(--medzera-s);
 }
 
 ul{
