@@ -1,0 +1,66 @@
+/* ===========================================
+   MINI CVIČENIE - MEDIA QUERIES
+   Vytvorte responzívnu stránku
+   =========================================== */
+
+/* TODO: Importujte Google Fonts - Montserrat a Open Sans */
+
+
+/* TODO: CSS Premenné - farby, spacing, fonty */
+:root {
+  /* Farby */
+  
+  /* Spacing */
+  
+  /* Typography */
+  
+}
+
+
+/* TODO: Základné štýly pre body */
+
+
+/* TODO: Container trieda (max-width: 1200px) */
+
+
+/* TODO: Header s logom */
+
+
+/* TODO: Navigácia - mobile: vertikálne, flex */
+
+
+/* TODO: Hero sekcia */
+
+
+/* TODO: Benefits sekcia - Grid (mobile: 1 stĺpec) */
+
+
+/* TODO: Destinácie - Grid (mobile: 1 stĺpec) */
+
+
+/* TODO: Footer - Grid (mobile: 1 stĺpec) */
+
+
+/* TODO: Tlačidlá */
+
+
+/* ==================== TABLET (768px+) ==================== */
+
+@media (min-width: 768px) {
+  /* TODO: Navigácia horizontálne */
+  
+  /* TODO: Benefits Grid 3 stĺpce */
+  
+  /* TODO: Destinácie Grid 2 stĺpce */
+  
+  /* TODO: Footer Grid 2 stĺpce */
+}
+
+
+/* ==================== DESKTOP (1024px+) ==================== */
+
+@media (min-width: 1024px) {
+  /* TODO: Destinácie Grid 3 stĺpce */
+  
+  /* TODO: Väčšie fonty */
+}
