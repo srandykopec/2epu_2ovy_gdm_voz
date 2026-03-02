@@ -20,18 +20,40 @@
   /* Spacing */
   
   /* Typography */
-  
+  --font-nadpis: 'Montserrat', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
 }
 
 
 /* TODO: Základné štýly pre body */
 
+body{
+  color: var(--text-tmavy);
+  background-color: var(--pozadie-biela);
+  font-family: var(--font-body);
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,h2,h3{
+  margin: 0;
+}
 
 /* TODO: Container trieda (max-width: 1200px) */
 
 
 /* TODO: Header s logom */
-
+.header{
+  background-color: var(--primarna);
+  color: var(--pozadie-svetla);
+}
 
 /* TODO: Navigácia - mobile: vertikálne, flex */
 
