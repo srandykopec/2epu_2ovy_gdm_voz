@@ -77,6 +77,8 @@ h1,h2,h3{
 
 }
 
+/* TODO: Navigácia - mobile: vertikálne, flex */
+
 .nav__zoznam{
   display: flex;
   flex-direction: column;
@@ -102,15 +104,25 @@ h1,h2,h3{
 
 
 
-
-
-
-
-
-/* TODO: Navigácia - mobile: vertikálne, flex */
-
-
 /* TODO: Hero sekcia */
+
+.hero{
+  background: linear-gradient(135deg, var(--primarna),var(--primarna-tmava));
+  color: var(--pozadie-biela);
+  text-align: center;
+  padding: var(--medzera-xl);
+}
+
+.hero__nadpis{
+  margin-bottom: var(--medzera-m);
+}
+
+.hero__text{
+  margin-bottom: var(--medzera-m);
+
+}
+
+
 
 
 /* TODO: Benefits sekcia - Grid (mobile: 1 stĺpec) */
