@@ -47,6 +47,10 @@ ul{
   list-style: none;  /* Odstránenie guličiek zo všetkých zoznamov */
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
 
 a{
   text-decoration: none; /* Odstránenie podčiarknutia  z odkazov */
@@ -124,17 +128,67 @@ h1,h2,h3{
 
 
 
+.hero__tlacidlo {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--akcent);
+  color: var(--bg-white);
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
 
-/* TODO: Benefits sekcia - Grid (mobile: 1 stĺpec) */
+.hero__tlacidlo:hover {
+  background-color: #ea580c;
+  transform: translateY(-2px);
+}
 
+.hero__tlacidlo--male {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
 
-/* TODO: Destinácie - Grid (mobile: 1 stĺpec) */
 
 
 /* TODO: Footer - Grid (mobile: 1 stĺpec) */
 
 
 /* TODO: Tlačidlá */
+
+
+/* ==================== VÝHODY ==================== */
+
+.vyhody {
+  background-color: var(--bg-light);
+}
+
+.vyhody__mrizka {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+.vyhody-karta {
+  background-color: var(--pozadie-biela);
+  padding: var(--space-md);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.vyhody-karta:hover {
+  transform: translateY(-4px);
+}
+
+.vyhody-karta__nazov {
+  font-size: 1.25rem;
+  color: var(--primarna);
+  margin-bottom: 0.5rem;
+}
+
+.vyhody-karta__text {
+  color: var(--text-medium);
+}
+
 
 
 /* ==================== TABLET (768px+) ==================== */
