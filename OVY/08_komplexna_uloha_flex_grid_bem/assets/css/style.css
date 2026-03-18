@@ -90,7 +90,6 @@ h1,h2,h3{
   padding: 0;
 }
 
-
 .nav__polozka{
  font-weight: 900;
 }
@@ -273,15 +272,6 @@ h1,h2,h3{
   border-top: 1px solid var(--text-stredny);
   color: var(--text-stredny);
 }
-
-
-
-
-
-
-
-
-
 
 /* ==================== TABLET (768px+) ==================== */
 
