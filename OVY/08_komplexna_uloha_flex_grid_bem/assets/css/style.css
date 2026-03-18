@@ -286,13 +286,37 @@ h1,h2,h3{
 /* ==================== TABLET (768px+) ==================== */
 
 @media (min-width: 768px) {
-  /* TODO: Navigácia horizontálne */
-  
-  /* TODO: Benefits Grid 3 stĺpce */
-  
-  /* TODO: Destinácie Grid 2 stĺpce */
-  
-  /* TODO: Footer Grid 2 stĺpce */
+
+  .nav__zoznam{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .header__obsah{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .vyhody__mriezka{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: var(--medzera-l)
+  }
+
+  .vyhody{
+    padding: var(--medzera-xl) 0;
+  }
+
+  .section-nazov{
+    margin-bottom: var(--medzera-xl);
+  }
+
+
+
 }
 
 
