@@ -123,9 +123,7 @@ h1,h2,h3{
 
 .hero__text{
   margin-bottom: var(--medzera-m);
-
 }
-
 
 
 .hero__tlacidlo {
@@ -146,7 +144,14 @@ h1,h2,h3{
 .hero__tlacidlo--male {
   padding: 0.5rem 1rem;
   font-size: 0.875rem;
+}
 
+.section-nazov {
+  font-size: 1.75rem;
+  text-align: center;
+  margin-bottom: var(--medzera-l);
+  color: var(--text-tmavy);
+}
 
 
 /* TODO: Footer - Grid (mobile: 1 stĺpec) */
@@ -158,18 +163,18 @@ h1,h2,h3{
 /* ==================== VÝHODY ==================== */
 
 .vyhody {
-  background-color: var(--bg-light);
+  background-color: var(--pozadie-svetla);
 }
 
 .vyhody__mrizka {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-md);
+  gap: var(--medzera-m);
 }
 
 .vyhody-karta {
   background-color: var(--pozadie-biela);
-  padding: var(--space-md);
+  padding: var(--medzera-m);
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
@@ -186,8 +191,97 @@ h1,h2,h3{
 }
 
 .vyhody-karta__text {
-  color: var(--text-medium);
+  color: var(--text-stredny);
 }
+
+
+
+
+
+
+
+
+/* ==================== DESTINÁCIE ==================== */
+
+.destinacie__mrizka {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--medzera-m);
+}
+
+.destinacia-karta {
+  background-color: var(--pozadie-biela);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.destinacia-karta:hover {
+  transform: translateY(-4px);
+}
+
+.destinacia-karta__obrazok {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.destinacia-karta__content {
+  padding: var(--medzera-m);
+}
+
+.destinacia-karta__nazov {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.destinacia-karta__text {
+  color: var(--text-stredny);
+  margin-bottom: var(--medzera-s);
+}
+
+.destinacia-karta__cena {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--akcent);
+  margin-bottom: var(--medzera-s);
+}
+
+/* ==================== FOOTER ==================== */
+
+.footer {
+  background-color: var(--text-tmavy);
+  color: var(--pozadie-biela);
+  padding: var(--medzera-xl) 0 var(--medzera-m);
+}
+
+.footer__mrizka {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--medzera-l);
+  margin-bottom: var(--medzera-l);
+}
+
+.footer__nazov {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--akcent);
+}
+
+.footer__spodok {
+  text-align: center;
+  padding-top: var(--medzera-m);
+  border-top: 1px solid var(--text-stredny);
+  color: var(--text-stredny);
+}
+
+
+
+
+
+
+
 
 
 
