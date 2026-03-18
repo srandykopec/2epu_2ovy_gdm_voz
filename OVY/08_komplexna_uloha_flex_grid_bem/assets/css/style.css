@@ -78,7 +78,6 @@ h1,h2,h3{
   display: flex;
   flex-direction: column;
   gap: var(--medzera-s);
-
 }
 
 /* TODO: Navigácia - mobile: vertikálne, flex */
@@ -126,25 +125,31 @@ h1,h2,h3{
 }
 
 
-.hero__tlacidlo {
+/* ==================== TLAČIDLÁ ==================== */
+
+.tlacidlo {
   display: inline-block;
   padding: 0.75rem 1.5rem;
   background-color: var(--akcent);
-  color: var(--bg-white);
+  color: var(--pozadie-biela);
   border-radius: 8px;
   font-weight: 600;
   transition: all 0.3s;
+  border: none;
+  cursor: pointer;
 }
 
-.hero__tlacidlo:hover {
+.tlacidlo:hover {
   background-color: #ea580c;
   transform: translateY(-2px);
 }
 
-.hero__tlacidlo--male {
+.tlacidlo--male {
   padding: 0.5rem 1rem;
   font-size: 0.875rem;
 }
+
+/**/
 
 .section-nazov {
   font-size: 1.75rem;
@@ -166,7 +171,7 @@ h1,h2,h3{
   background-color: var(--pozadie-svetla);
 }
 
-.vyhody__mrizka {
+.vyhody__mriezka {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--medzera-m);
@@ -194,16 +199,9 @@ h1,h2,h3{
   color: var(--text-stredny);
 }
 
-
-
-
-
-
-
-
 /* ==================== DESTINÁCIE ==================== */
 
-.destinacie__mrizka {
+.destinacie__mriezka {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--medzera-m);
@@ -256,7 +254,7 @@ h1,h2,h3{
   padding: var(--medzera-xl) 0 var(--medzera-m);
 }
 
-.footer__mrizka {
+.footer__mriezka {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--medzera-l);
