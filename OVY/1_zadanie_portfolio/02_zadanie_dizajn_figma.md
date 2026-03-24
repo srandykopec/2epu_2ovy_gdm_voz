@@ -120,7 +120,7 @@ SÉMANTICKÉ:
 
 #### 📋 Úloha: Vytvorte a zadokumentujte paletu
 
-Vo Figme vytvorte **stránku "Farebná paleta"** kde budete mať štvorček s farbou a jej kódom:
+Vo Figme vytvorte **frame "Farebná paleta"** kde budete mať štvorček s farbou a jej kódom:
 
 ```
 ┌─────────────────────────────────────┐
@@ -205,7 +205,7 @@ ExtraBold (800)  → Hero nadpisy (extra impact)
 #### 🎯 Kde nájsť fonty?
 
 **[Google Fonts](https://fonts.google.com)** (ODPORÚČANÉ - zadarmo, ľahké použitie)
-**[Font Joy - aké fonty sa k sebe hodia](https://fontjoy.com/)** (ODPORÚČENÉ - zadarmo, ľahké použitie)
+**[Font Joy - aké fonty sa k sebe hodia](https://fontjoy.com/)** 
 
 ---
 
@@ -217,40 +217,40 @@ V reálnej praxi (a pri kódovaní) chcete mať komponenty, aby ste:
 1. Nemuseli kresliť rovnaké tlačidlo 50×
 2. Zmenili tlačidlo na jednom mieste → zmení sa všade
 
-**[Tutorial komponenty vo Figme](https://www.youtube.com/watch?v=KnmxD8LvHmA )** (ODPORÚČENÉ - zadarmo, ľahké použitie)
+**[Tutorial komponenty vo Figme](hhttps://youtu.be/2AN92es01YQ?si=6-D_31QFBVpPzs6k&t=591)** (Odkaz do videa priamo na časť o komponentoch)
 
 
 #### 🎯 Aké komponenty vytvoriť?
 
 **POVINNÉ komponenty:**
 
-1. **Buttons (Tlačidlá)**
-   - Primary button (hlavné)
-   - Secondary button (menej dôležité)
-   - Text link (len text)
+1. **Tlačidlá**
+   - Primárne tlačidlo (hlavné)
+   - Secundárne tlačidlo (menej dôležité)
+   - Text linku (len text)
    - Varianty:  
      - Default (normálny stav)
      - Hover (pri navedení myšou)
      - Disabled (neaktívny)
 
-2. **Navigation (Navigácia)**
+2. **Navigácia**
    - Desktop nav (horizontálna)
    - Mobile nav (hamburger menu)
    - Nav item: Active stav (aktuálna stránka)
 
-3. **Cards (Karty)**
-   - Project card (pre portfólio)
-   - Skill card (pre zručnosti)
+3. **Karty**
+   - Karta projektu (pre portfólio)
+   - Karta zručností (pre zručnosti)
 
-4. **Form Fields (Formulárové polia)**
+4. **Formulárové polia**
    - Text input
    - Textarea
    - Label
    - Error stav (červený border)
 
-5. **Icons (Ikony)**
-   - Social media icons (LinkedIn, GitHub, Instagram)
-   - Interface icons (hamburger menu, close)
+5. **Ikony**
+   - Ikonky sociálnyc médii (LinkedIn, GitHub, Instagram)
+   - Ikony (hamburger menu, zatvoriť)
 
 ---
 
@@ -283,7 +283,7 @@ Shadow: 0px 4px 8px rgba(0,0,0,0.15) [väčší]
 
 ---
 
-## 🎨 KROK 5: Vytvorte high-fidelity dizajn
+## 🎨 KROK 5: Vytvorte  dizajn
 
 **Teraz ideme dizajnovať!** 🎉
 
@@ -293,9 +293,9 @@ Máte pripravené:
 - ✅ Typografiu (fonty)
 - ✅ Komponenty
 
-**Postup:**
+**Postup (nie je povinné ho dodržiavať, ale môže sa hodiť):**
 
-### 1. Zduplikujte wireframe frames
+### 1. Zduplikujte wireframe framy
 
 ```
 01_Domov_Desktop → 01_Domov_Desktop_Dizajn
@@ -359,8 +359,67 @@ Borders:
 
 ---
 
+## 🎯 Hodnotenie dizajnu
 
-## 📤 Čo odovzdať?
+Váš dizajn bude ohodnotený **3 známkami**.
+
+---
+
+### **ZNÁMKA 1: Farby, Fonty, Hierarchia** 🎨✍️
+
+**Čo sa hodnotí:**
+- Farebná paleta vytvorená a zdokumentovaná (HEX kódy)
+- Text čitateľný voči pozadiu (kontrast!)
+- Fonty dobre zvolené (max 2-3), konzistentne použité
+- Hierarchia jasná (nadpisy ≠ text, dôležité vyniká)
+
+**Známky:**
+- **1** - Profesionálna paleta, perfektné fonty, jasná hierarchia
+- **2** - Dobrá paleta/fonty, funguje to, malé nedostatky
+- **3** - Základy OK, ale nedostatky v konzistencii
+- **4** - Slabé, nejasná hierarchia, problém s čitateľnosťou
+- **5** - Chaos, nečitateľné, náhodné farby/fonty
+
+---
+
+### **ZNÁMKA 2: Layout (Rozloženie)** 📏
+
+**Čo sa hodnotí:**
+- Elementy zarovnané (nie náhodne)
+- Konzistentné medzery (spacing)
+- Komponenty rovnaké všade (tlačidlá, karty, header/footer)
+- Mobile logicky prispôsobený (nie zmenšený desktop)
+
+**Známky:**
+- **1** - Pixel-perfect, konzistentné, dokonalý layout
+- **2** - Dobre, malé odchýlky, layout funguje
+- **3** - Väčšinou OK, viditeľné problémy
+- **4** - Chaotické zarovnanie, slabý layout
+- **5** - Náhodné rozmiestnenie, nepoužiteľné
+
+---
+
+### **ZNÁMKA 3: Celkový dojem** ✨
+
+**Čo sa hodnotí:**
+- Všetkých 8 frames hotových (desktop + mobile)
+- Design System stránka vytvorená
+- Reálny obsah (nie Lorem Ipsum)
+- Vizuálne detaily (shadows, icons, hover states)
+- Profesionálny vzhľad (nie školské cvičenie)
+- Figma súbor organizovaný
+
+**Známky:**
+- **1** - WOW faktor, profesionálne, kompletné, detaily 100%
+- **2** - Príjemné, kompletné, malé nedostatky
+- **3** - OK, ale chýba "polish"
+- **4** - Slabé, neúplné, málo snahy
+- **5** - Nekompletné, amatérske, chaos
+
+---
+
+
+---
 
 ### 1. **Figma súbor** 
 - Pomenujte: `Portfolio_Design_VašeMeno`
@@ -369,69 +428,22 @@ Borders:
   2. **Desktop verzia** (4 podstránky desktop verzie)
   3. **Mobilná verzia** (4 podstránky mobilnej verzie)
 
-### 2. **Export Assets** (pre kódovanie)
 
-Exportujte do priečinka:
-- **Všetky obrázky** (projekty, profilová fotka, hero image)
-  - Formát: JPG (fotky), PNG (ilustrácie s transparentom)
-  - Rozmer: 2× (retina ready)
-- **Ikony** (SVG formát)
-- **Logo** (ak máte vlastné)
 
-### 3. **Design Specs dokument** (textový súbor)
-
-Vytvorte `design-specs.md` s týmito informáciami:
-
-```markdown
-# Design Specifications
-
-## Colors
-- Primary: #3B82F6
-- Primary Dark: #2563EB
-- Secondary: #F97316
-- Text Dark: #111827
-- Text Medium: #374151
-- Background: #F9FAFB
-
-## Typography
-- Headings: Montserrat, 700
-- Body: Open Sans, 400
-
-### Font Sizes
-- h1: 48px / 3rem
-- h2: 40px / 2.5rem
-- h3: 32px / 2rem
-- p: 16px / 1rem
-
-## Spacing (8pt grid)
-- Section padding: 64px
-- Card gap: 24px
-- Card padding: 24px
-
-## Border Radius
-- Buttons: 8px
-- Cards: 12px
-
-## Shadows
-- Card: 0 2px 8px rgba(0,0,0,0.08)
-- Button: 0 2px 4px rgba(0,0,0,0.1)
-```
-
-**Toto je PRE VÁS pri kódovaní!** Nebudete si pamätať všetky HEX kódy a veľkosti.
 
 ---
 
-## 💡 Best Practices z reálnej praxe
+## 💡 Príklady z praxe
 
-### ✅ DO (robte):
+### ✅ Nevyžiadané rady:
 1. **Konzistentnosť je kľúč** - rovnaké componenty, spacing, farby všade
 2. **Mobile-first thinking** - navrhnite mobile, potom rozšírte na desktop
-3. **Whitespace je váš priateľ** - nenatlačte všetko na seba
+3. **Biely priestor je váš priateľ** - nenatlačte všetko na seba
 4. **Menej je viac** - radšej minimalistický než preplnený dizajn
 5. **Testujte kontrast** - text musí byť čitateľný
 6. **Používajte reálny obsah** - nie Lorem Ipsum
 
-### ❌ DON'T (nerobte):
+### ❌ Toto radšej nie(radšej knihu):
 1. **Viac ako 3 fonty** - chaos
 2. **Viac ako 5 farieb** (+ odtiene) 
 3. **Random spacing** - 17px, 23px, 41px... → použite 8pt grid!
