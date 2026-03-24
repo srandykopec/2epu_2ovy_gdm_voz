@@ -1,4 +1,4 @@
-# Zadanie 2. fáza: High-Fidelity dizajn osobného portfólia vo Figme
+# Zadanie 2. fáza: Dizajn osobného portfólia vo Figme
 
 ## 🎯 Cieľ úlohy
 Pretransformovať váš wireframe do finálneho profesionálneho dizajnu s farbami, typografiou, obrázkami a všetkými detailmi potrebnými pre kódovanie.
