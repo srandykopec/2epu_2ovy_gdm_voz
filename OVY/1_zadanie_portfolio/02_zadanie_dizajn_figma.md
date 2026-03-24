@@ -6,7 +6,7 @@ Pretransformovať váš wireframe do finálneho profesionálneho dizajnu s farba
 **Výsledok:** Pixel-perfect dizajn, podľa ktorého budete kódovať svoje portfólio.
 
 
-**[Figma  tutorial](https://www.youtube.com/watch?v=2AN92es01YQ )** - rýchlokurz geniality o Figme, vysvetlené zákaldné koncepty, ktoré vám uľahčia prácu, odporúčam **auto layout** (6:10) a **komponenty** (9:57)
+**[Figma  tutorial](https://www.youtube.com/watch?v=2AN92es01YQ )** - rýchlokurz geniality o Figme, vysvetlené základné koncepty, ktoré vám uľahčia prácu, odporúčam **auto layout** (6:10) a **komponenty** (9:57)
 
 ---
 
