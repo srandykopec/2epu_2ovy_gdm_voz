@@ -412,7 +412,7 @@ Váš dizajn bude ohodnotený **3 známkami**.
 **Známky:**
 - **1** - WOW faktor, profesionálne, kompletné, detaily 100%
 - **2** - Príjemné, kompletné, malé nedostatky
-- **3** - OK, ale chýba "polish"
+- **3** - OK, ale chýba doladenie
 - **4** - Slabé, neúplné, málo snahy
 - **5** - Nekompletné, amatérske, chaos
 
