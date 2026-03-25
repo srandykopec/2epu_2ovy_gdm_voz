@@ -204,8 +204,8 @@ ExtraBold (800)  → Hero nadpisy (extra impact)
 
 #### 🎯 Kde nájsť fonty?
 
-**[Google Fonts](https://fonts.google.com)** (ODPORÚČANÉ - zadarmo, ľahké použitie)
-**[Font Joy - aké fonty sa k sebe hodia](https://fontjoy.com/)** 
+- **[Google Fonts](https://fonts.google.com)** (ODPORÚČANÉ - zadarmo, ľahké použitie)
+- **[Font Joy - aké fonty sa k sebe hodia](https://fontjoy.com/)** 
 
 ---
 
