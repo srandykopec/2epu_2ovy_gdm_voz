@@ -1,4 +1,4 @@
-# JavaScript Starterpack 🚀
+# JavaScript  🚀
 
 ## 1. Čo je JavaScript?
 
