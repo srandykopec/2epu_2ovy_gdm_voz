@@ -1,4 +1,4 @@
-# JavaScript  🚀
+# JavaScript Starterpack 🚀
 
 ## 1. Čo je JavaScript?
 
@@ -74,9 +74,56 @@
 
 ---
 
-## 3. Základné princípy a termíny
+## 3. Komentáre v JavaScripte
 
-### 3.1 Console (Konzola)
+**Komentár** = Text v kóde, ktorý JavaScript ignoruje. Slúži na poznámky pre programátora.
+
+**Prečo písať komentáre?**
+- 📝 **Vysvetliť zložitý kód** - Aby si po čase vedel, čo si myslel
+- 👥 **Pomôcť iným** - Keď niekto iný číta tvoj kód
+- 🚫 **Dočasne vypnúť kód** - Bez toho, aby si ho zmazal
+
+---
+
+### Jednoriadkový komentár
+
+Používa sa `//` - všetko za `//` na tom istom riadku sa ignoruje.
+
+```javascript
+// Toto je komentár - JavaScript ho ignoruje
+let meno = "Janko"; // Môžem pridať komentár aj za kód
+
+// console.log("Tento riadok sa nespustí");
+console.log("Tento riadok sa spustí"); // Vypíše: Tento riadok sa spustí
+```
+
+---
+
+### Viacriadkový komentár
+
+Používa sa `/* ... */` - všetko medzi `/*` a `*/` sa ignoruje.
+
+```javascript
+/*
+  Toto je dlhší komentár
+  na viacerých riadkoch.
+  Užitočný na dlhšie vysvetlenia.
+*/
+
+let vek = 16;
+
+/*
+let zakomentovanyKod = "toto sa nespustí";
+let dalsyRiadok = 123;
+*/
+
+console.log("Toto funguje"); // Vypíše: Toto funguje
+```
+---
+
+## 4. Základné princípy a termíny
+
+### 4.1 Console (Konzola)
 
 **Console (Konzola)** = Vývojársky nástroj zabudovaný v každom prehliadači, kde sa zobrazujú správy z JavaScriptu.
 
@@ -112,7 +159,7 @@ Math.random() // → náhodné číslo napr. 0.6438271
 --- 
 
 
-### 3.2 Premenné (Variables)
+### 4.2 Premenné (Variables)
 
 **Čo je premenná a prečo ju potrebujeme?**
 
