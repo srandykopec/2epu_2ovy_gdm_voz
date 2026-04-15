@@ -37,7 +37,7 @@ V reálnej praxi funguje takto:
 **PRED dizajnovaním upravte váš wireframe** tak, aby obsahoval:
 - ✅ Skutočné texty (nie Lorem Ipsum) - meno, bio, popisy projektov
 - ✅ Skutočné obrázky - profilová fotka, screenshots projektov (min. 6)
-- ✅ Zoznam zručností (min. 8-12)
+- ✅ Zoznam zručností (min. 6-10)
 - ✅ Kontaktné informácie - email, telefón, sociálne siete
 
 **💡 TIP:** Uložte si všetky obrázky do jedného priečinka - budete ich potrebovať pri kódovaní!
@@ -64,9 +64,7 @@ V reálnej praxi funguje takto:
    
 4. NEUTRÁLNE (šedé) ......................... 4-6 odtieňov
    → Používa sa: text, pozadia, bordery
-   
-5. SÉMANTICKÉ (výzva) ....................... 3 farby
-   → Success (zelená), Warning (oranžová), Error (červená)
+
 ```
 
 **Spolu: 11-14 farieb v palete aj s odtieňmi, jednoducho všetky možnosti kde sa bude použígvať farba. Pre naše potreby nemusíte mať definované komplet všetky, stále sa učíme, ale určite by ste aspoň základnú farebnú paletu mali mať zvolenú, čiže primárnu farbu, jej odtieňe, doplkovú a neutrálnu.**
@@ -110,10 +108,6 @@ NEUTRÁLNE (šedá škála):
 --neutral-800: #1F2937    /* Text najčernejší */
 --neutral-900: #111827    /* Nadpisy */
 
-SÉMANTICKÉ:
---success: #10B981        /* Zelená (úspech) */
---warning: #F59E0B        /* Oranžová (upozornenie) */
---error: #EF4444          /* Červená (chyba) */
 ```
 
 
@@ -138,10 +132,6 @@ Vo Figme vytvorte **frame "Farebná paleta"** kde budete mať štvorček s farbo
 │  ████ #F9FAFB  neutral-50         │
 │  ████ #374151  neutral-700        │
 │  ████ #111827  neutral-900        │
-│                                     │
-│  SEMANTICKÉ                         │
-│  ████ #10B981  success            │
-│  ████ #EF4444  error              │
 └─────────────────────────────────────┘
 ```
 
