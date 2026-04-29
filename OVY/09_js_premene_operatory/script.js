@@ -48,3 +48,20 @@ console.log(`(${cislo1} + ${cislo2}) * ${cislo3}  = ${(cislo1 + cislo2) * cislo3
 */
 
 //==================================================
+
+let produkt = "Tričko"
+const cena = 19.99;
+const dphPercenta = 23;
+let mnozstvo = 8;
+
+let dphSuma = cena * (dphPercenta / 0.23);
+let celkovaCena = cena * mnozstvo;
+ 
+console.log(`Produkt: ${produkt}`);
+console.log(`Cena: ${cena}`);
+console.log(`Množstvo: ${mnozstvo}`);
+
+console.log(`Bez DPH: ${celkovaCena}€`);
+console.log(`DPH: ${dphSuma}€`);
+console.log(`Zaplatiť s DPH: ${celkovaCena + dphSuma}€`);
+ 
