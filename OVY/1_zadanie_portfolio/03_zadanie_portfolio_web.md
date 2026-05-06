@@ -218,14 +218,14 @@ Obsah jednotlivých podstránok bude hodnotený podľa toho, či ste ho splnili 
 
 ## ✅ Kritériá hodnotenia
 
-### 1️⃣ HTML štruktúra (20 bodov)
+### 1️⃣ HTML štruktúra
 
 **Čo sa hodnotí:**
-- ✅ **Počet stránok** (5b) - všetky 4 stránky vytvorené (index.html, o-mne.html, portfolio.html, kontakt.html)
-- ✅ **Sémantické elementy** (5b) - správne použitie `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`
-- ✅ **Obsah sekcií** (5b) - všetky požadované sekcie z checklistu (hero, projekty, kontakt...)
-- ✅ **Validita kódu** (3b) - HTML validátor bez chýb
-- ✅ **Atribúty** (2b) - `alt` na obrázkoch, správne `href` linky, meta viewport
+- ✅ **Počet stránok** - všetky 4 stránky vytvorené (index.html, o-mne.html, portfolio.html, kontakt.html)
+- ✅ **Sémantické elementy** - správne použitie `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`
+- ✅ **Obsah sekcií** - všetky požadované sekcie z checklistu (hero, projekty, kontakt...)
+- ✅ **Validita kódu** - HTML validátor bez chýb
+- ✅ **Atribúty** - `alt` na obrázkoch, správne `href` linky, meta viewport
 
 **Ako získať plný počet:**
 - Všetky 4 HTML súbory vytvorené a funkčné
@@ -235,15 +235,15 @@ Obsah jednotlivých podstránok bude hodnotený podľa toho, či ste ho splnili 
 
 ---
 
-### 2️⃣ CSS kvalita (20 bodov)
+### 2️⃣ CSS kvalita
 
 **Čo sa hodnotí:**
-- ✅ **BEM metodológia** (5b) - konzistentné pomenovanie tried (`.block__element--modifier`)
-- ✅ **CSS premenné** (4b) - `:root` s premennými pre farby, spacing, fonty
-- ✅ **Relatívne jednotky** (3b) - použitie `rem`, `em`, `%` tak kde je to nutné
-- ✅ **Organizácia kódu** (3b) - prehľadné sekcie, komentáre, logické usporiadanie
-- ✅ **Flexbox/Grid** (3b) - správne použitie moderných layoutov
-- ✅ **Normalize.css** (2b) - pripojený a fungujúci
+- ✅ **BEM metodológia** - konzistentné pomenovanie tried (`.block__element--modifier`)
+- ✅ **CSS premenné** - `:root` s premennými pre farby, spacing, fonty
+- ✅ **Relatívne jednotky** - použitie `rem`, `em`, `%` tak kde je to nutné
+- ✅ **Organizácia kódu** - prehľadné sekcie, komentáre, logické usporiadanie
+- ✅ **Flexbox/Grid** - správne použitie moderných layoutov
+- ✅ **Normalize.css** - pripojený a fungujúci
 
 **Ako získať plný počet:**
 - Názvy tried podľa BEM (napr. `.hero__nazov`, `.projekt-karta__obrazok`)
@@ -253,12 +253,12 @@ Obsah jednotlivých podstránok bude hodnotený podľa toho, či ste ho splnili 
 
 ---
 
-### 3️⃣ Responzivita (20 bodov)
+### 3️⃣ Responzivita
 
 **Čo sa hodnotí:**
-- ✅ **Mobilná verzia (375px)** (8b) - perfektne funguje, žiadne zlomy, čitateľný text
-- ✅ **Desktopová verzia (1024px+)** (8b) - správne prispôsobený layout, využitie šírky
-- ✅ **Media queries** (4b) - správne napísané `@media (min-width: 1024px)`, mobile-first prístup
+- ✅ **Mobilná verzia (375px)** - perfektne funguje, žiadne zlomy, čitateľný text
+- ✅ **Desktopová verzia (1024px+)** - správne prispôsobený layout, využitie šírky
+- ✅ **Media queries** - správne napísané `@media (min-width: 1024px)`, mobile-first prístup
 
 **Ako získať plný počet:**
 - Na mobile (375px): všetko pod sebou, žiadne horizontálne skrolovanie
@@ -267,14 +267,14 @@ Obsah jednotlivých podstránok bude hodnotený podľa toho, či ste ho splnili 
 
 ---
 
-### 4️⃣ Dizajn (20 bodov)
+### 4️⃣ Dizajn
 
 **Čo sa hodnotí:**
-- ✅ **Farebná schéma** (5b) - farby zodpovedajú dizajnu z Figmy
-- ✅ **Typografia** (5b) - správne fonty z Google Fonts, veľkosti fontov podobné Figme
-- ✅ **Spacing/Medzery** (4b) - konzistentné medzery medzi sekciami a elementmi
-- ✅ **Vizuálna vernosť** (4b) - celkový vzhľad zodpovedá dizajnu z Figmy
-- ✅ **Obrázky** (2b) - všetky obrázky exportované a použité
+- ✅ **Farebná schéma** - farby zodpovedajú dizajnu z Figmy
+- ✅ **Typografia** - správne fonty z Google Fonts, veľkosti fontov podobné Figme
+- ✅ **Spacing/Medzery** - konzistentné medzery medzi sekciami a elementmi
+- ✅ **Vizuálna vernosť** - celkový vzhľad zodpovedá dizajnu z Figmy
+- ✅ **Obrázky** - všetky obrázky exportované a použité
 
 **Ako získať plný počet:**
 - Použité HEX kódy z vašej Figma palety (cez CSS premenné)
@@ -285,12 +285,12 @@ Obsah jednotlivých podstránok bude hodnotený podľa toho, či ste ho splnili 
 
 ---
 
-### 5️⃣ GitHub + GitHub Pages (10 bodov)
+### 5️⃣ GitHub + GitHub Pages
 
 **Čo sa hodnotí:**
-- ✅ **GitHub repozitár** (4b) - projekt nahraný, má README (voliteľné)
-- ✅ **GitHub Pages** (4b) - stránka je živá a funguje na GitHub Pages
-- ✅ **Odovzdanie** (2b) - zip + 2 linky (repo + live) na MS Teams
+- ✅ **GitHub repozitár** - projekt nahraný, má README (voliteľné)
+- ✅ **GitHub Pages** - stránka je živá a funguje na GitHub Pages
+- ✅ **Odovzdanie** - zip + 2 linky (repo + live) na MS Teams
 
 **Ako získať plný počet:**
 - Repozitár existuje a obsahuje všetky súbory
@@ -299,8 +299,7 @@ Obsah jednotlivých podstránok bude hodnotený podľa toho, či ste ho splnili 
 
 ---
 
-### 6️⃣ Celkový dojem (10 bodov)
-
+### 6️⃣ Celkový dojem 
 **Ako získať plný počet:**
 - Stránka vyzerá ako profesionálne portfólio
 - Navigácia funguje, linky vedú na správne stránky
