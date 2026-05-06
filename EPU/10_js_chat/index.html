@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Chat 💬</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="chat-wrapper">
+
+    <header class="chat-header">
+      <span class="chat-header__avatar">🤖</span>
+      <div class="chat-header__info">
+        <strong>BotKo</strong>
+        <span class="chat-header__status">online</span>
+      </div>
+    </header>
+
+    <!-- Zoznam správ -->
+    <main class="chat-messages" id="chatMessages">
+      <!-- Správy sa pridávajú cez JavaScript -->
+    </main>
+
+    <!-- Formulár na odoslanie správy -->
+    <form class="chat-form" id="chatForm">
+      <input
+        class="chat-form__input"
+        type="text"
+        id="messageInput"
+        placeholder="Napíš správu..."
+        autocomplete="off"
+      >
+      <button class="chat-form__btn" type="submit">Odoslať ➤</button>
+    </form>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
